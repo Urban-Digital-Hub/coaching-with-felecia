@@ -63,7 +63,7 @@ function Carousel() {
                     <a className="btn btn-light btn-lg shadow-sm" href="#" style={{ color: COLOR.scondary, minWidth: '160px' }}>
                       {slide.ctaPrimary}
                     </a>
-                    <a className="btn btn-outline-light btn-lg" href="#" style={{ minWidth: '160px' }}>
+                    <a className="btn btn-outline-light btn-lg" href="#" style={{ minWidth: '160px', }}>
                       {slide.ctaSecondary}
                     </a>
                   </div>

@@ -92,7 +92,7 @@ function Services() {
           <h2 className="fw-bold mb-3">A services experience built around you.</h2>
           <p className="mb-4 text-white-75">From one-on-one guidance to premium digital support, our services bring calm, clarity, and confidence to every part of your journey.</p>
           <a className="btn btn-outline-light btn-lg" href="#" style={{ borderColor: '#fff' }}>
-            Book a Consultation
+            Book a Session
           </a>
         </div>
       </div>

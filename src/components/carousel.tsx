@@ -2,8 +2,8 @@ import COLOR from '../../constants/color'
 
 const slides = [
   {
-    title: 'You are safe at our space',
-    description: 'We help you achieve your goals and live a healthier, happier life.',
+    title: 'Where your healing, your story, and your next chapter begin.',
+    description: 'FELECIA HAMMOND Author. Coach. Mentor. Guide. Helping strong women soften, breathe, and rebuild their lives from the inside out.',
     ctaPrimary: 'Get In Touch',
     ctaSecondary: 'Book a Session',
   },

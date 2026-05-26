@@ -8,12 +8,27 @@ function About() {
           <div className="col-lg-6">
             <div className="px-4 py-5 rounded-4 shadow-sm" style={{ backgroundColor: 'rgba(255, 255, 255, 0.96)' }}>
               <span className="badge rounded-pill px-3 py-2 mb-3" style={{ backgroundColor: COLOR.primary, color: '#fff' }}>
-                About Us
+                About Me
               </span>
-              <h2 className="display-6 fw-bold mb-3">Elegant care for every step of your journey.</h2>
+              <h2 className="display-6 fw-bold mb-3">A woman who survived the storm — and learned how to heal from it.</h2>
               <p className="mb-4 text-muted">
-                We are a modern team focused on wellbeing, clarity, and confidence. Our mission is to create a welcoming experience that helps you grow stronger, healthier, and more fulfilled.
+               I’m a memoirist, wellness creator, and emotional healing coach for women who have lived in survival mode for far too long. My work blends nervous-system awareness, spiritual grounding, emotional intelligence, and lived experience.
               </p>
+              <div className="mb-4">
+                <h5 className="fw-bold">I help women:</h5>
+                <ul className="list-unstyled text-muted mb-3">
+                  <li>• Break old survival patterns</li>
+                  <li>• Heal emotional flashbacks</li>
+                  <li>• Rebuild identity</li>
+                  <li>• Strengthen their bodies</li>
+                  <li>• Nourish themselves without shame</li>
+                  <li>• Create lives rooted in peace, not pressure</li>
+                </ul>
+                <p className="mb-3 text-muted">
+                  Your story matters. Your healing matters. And you don’t have to walk this journey alone.
+                </p>
+                
+              </div>
               <div className="row g-3">
                 <div className="col-12">
                   <div className="d-flex align-items-start gap-3">
@@ -37,13 +52,16 @@ function About() {
                     </div>
                   </div>
                 </div>
+                <a href="#contact" className="btn btn-close-white" style={{ backgroundColor: COLOR.scondary, color: '#fff', minWidth: '180px' }}>
+                  Learn More About Me
+                </a>
               </div>
             </div>
           </div>
 
           <div className="col-lg-6">
             <div className="rounded-4 overflow-hidden shadow-sm" style={{ minHeight: '420px', background: 'linear-gradient(180deg, rgba(153, 113, 21, 0.12), rgba(11, 33, 70, 0.1))' }}>
-              <img src="/images/about.jpeg" alt="About us" className="img-fluid w-100 h-100 object-fit-cover" style={{ minHeight: '420px' }} />
+              <img src="/images/about.jpeg" alt="About me" className="img-fluid w-100 h-100 object-fit-cover" style={{ minHeight: '420px' }} />
             </div>
           </div>
         </div>

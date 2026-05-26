@@ -11,20 +11,33 @@ import Swal from "sweetalert2"
 import { useEffect } from "react"
 import BookSession from "./components/bookSession"
 
+declare global {
+  interface Window {
+    Tawk_API: any
+    Tawk_LoadStart: Date
+  }
+}
 
 function App() {
- 
+  useEffect(() => {
+    window.Tawk_API = window.Tawk_API || {}
+    window.Tawk_LoadStart = new Date()
 
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/6a159c10ab32691c3031f901/1jpi6j8qr';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
+    const s1 = document.createElement("script")
+    s1.async = true
+    s1.src = 'https://embed.tawk.to/6a159c10ab32691c3031f901/1jpi6j8qr'
+    s1.charset = 'UTF-8'
+    s1.setAttribute('crossorigin', '*')
+    s1.id = 'tawk-script'
 
+    const s0 = document.getElementsByTagName("script")[0]
+    s0?.parentNode?.insertBefore(s1, s0)
+
+    return () => {
+      const existing = document.getElementById('tawk-script')
+      existing?.parentNode?.removeChild(existing)
+    }
+  }, [])
 
   const welcomeMessage = () => {
     const audio = new Audio('/sound/week7-brrring.mp3')

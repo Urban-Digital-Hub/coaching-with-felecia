@@ -1,13 +1,10 @@
-import React from 'react'
-import { useState } from 'react';
+
 import COLOR from '../../constants/color'
 import Swal from 'sweetalert2';
 function Contact() {
-   const [result, setResult] = React.useState("");
 
-  const onSubmit = async (event) => {
+  const onSubmit = async (event: any) => {
     event.preventDefault();
-    setResult("Sending....");
     const formData = new FormData(event.target);
 
     formData.append("access_key", "0e96f1ee-8a50-404c-baab-4973d5e0dbff");
@@ -20,7 +17,6 @@ function Contact() {
     const data = await response.json();
 
     if (data.success) {
-      setResult("Form Submitted Successfully");
       Swal.fire({
         icon: 'success',
         title: 'Success',
@@ -29,7 +25,11 @@ function Contact() {
       event.target.reset();
     } else {
       console.log("Error", data);
-      setResult(data.message);
+      Swal.fire({
+        icon: 'error',
+        title: 'Error',
+        text: 'Failed to send your message. Please try again.'
+      });
     }
   };
 

@@ -102,6 +102,7 @@ function Contact() {
                   <label className="form-label text-muted">Name</label>
                   <input
                     name="name"
+                    required
                     type="text"
                     className="form-control rounded-4 border bg-light"
                     placeholder="Your name"
@@ -112,6 +113,7 @@ function Contact() {
                   <label className="form-label text-muted">Email</label>
                   <input
                     name="email"
+                    required
                     type="email"
                     className="form-control rounded-4 border bg-light"
                     placeholder="you@example.com"
@@ -132,6 +134,7 @@ function Contact() {
                   <label className="form-label text-muted">Message</label>
                   <textarea
                     name="message"
+                    required
                     className="form-control rounded-4 border bg-light"
                     rows={6}
                     placeholder="Write your message here..."

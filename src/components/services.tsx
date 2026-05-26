@@ -58,7 +58,7 @@ function Services() {
           <div className="col-lg-6">
             <div className="rounded-4 overflow-hidden shadow-sm" style={{ minHeight: '520px', background: 'linear-gradient(180deg, rgba(153, 113, 21, 0.15), rgba(11, 33, 70, 0.08))' }}>
               <img
-                src="/images/service.jpeg"
+                src="public/images/person/3person.jpg"
                 alt="Service illustration"
                 className="img-fluid w-100 h-100 object-fit-cover"
                 style={{ minHeight: '520px' }}
@@ -91,7 +91,7 @@ function Services() {
         <div className="rounded-4 mt-5 p-5 text-center" style={{ backgroundColor: COLOR.scondary, color: '#fff' }}>
           <h2 className="fw-bold mb-3">A services experience built around you.</h2>
           <p className="mb-4 text-white-75">From one-on-one guidance to premium digital support, our services bring calm, clarity, and confidence to every part of your journey.</p>
-          <a className="btn btn-outline-light btn-lg" href="#" style={{ borderColor: '#fff' }}>
+          <a className="btn btn-outline-light btn-lg" href="https://calendar.app.google/D3Qd7kxgAXbesDXW9" target='blank'  rel="noreferrer" style={{ borderColor: '#fff' }}>
             Book a Session
           </a>
         </div>

@@ -3,6 +3,7 @@ import { FaInstagram, FaFacebookF, FaLinkedinIn, FaTwitter } from 'react-icons/f
 import { SiTiktok } from 'react-icons/si'
 
 function Footer() {
+  const currentYear = new Date().getFullYear()
   return (
     <footer className="py-5" style={{ backgroundColor: COLOR.scondary, color: '#f1f3f8' }}>
       <div className="container">
@@ -119,7 +120,7 @@ function Footer() {
         </div>
 
         <div className="border-top border-white-10 pt-4 mt-5 text-center text-white" style={{ color: '#ced4da' }}>
-          © 2026 Felicia. All rights reserved.
+          © {currentYear} Felicia. All rights reserved.
         </div>
       </div>
     </footer>

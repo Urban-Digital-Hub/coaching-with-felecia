@@ -61,7 +61,7 @@ function About() {
 
           <div className="col-lg-6">
             <div className="rounded-4 overflow-hidden shadow-sm" style={{ minHeight: '420px', background: 'linear-gradient(180deg, rgba(153, 113, 21, 0.12), rgba(11, 33, 70, 0.1))' }}>
-              <img src="/images/about.jpeg" alt="About me" className="img-fluid w-100 h-100 object-fit-cover" style={{ minHeight: '420px' }} />
+              <img src="/images/person/24person.jpg" alt="About me" className="img-fluid w-100 h-100 object-fit-cover" style={{ minHeight: '420px' }} />
             </div>
           </div>
         </div>
@@ -69,7 +69,7 @@ function About() {
         <div className="row align-items-center g-5 mt-5">
           <div className="col-lg-6">
             <div className="rounded-4 overflow-hidden shadow-sm" style={{ minHeight: '400px', background: 'linear-gradient(180deg, rgba(11, 33, 70, 0.14), rgba(153, 113, 21, 0.08))' }}>
-              <img src="/images/mission.jpeg" alt="Our mission" className="img-fluid w-100 h-100 object-fit-cover" style={{ minHeight: '400px' }} />
+              <img src="/images/person/34person.jpg" alt="Our mission" className="img-fluid w-100 h-100 object-fit-cover" style={{ minHeight: '400px' }} />
             </div>
           </div>
 

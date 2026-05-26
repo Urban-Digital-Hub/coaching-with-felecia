@@ -9,6 +9,7 @@ import { Route, Routes } from "react-router-dom"
 import Notfound from "./pages/notfound"
 import Swal from "sweetalert2"
 import { useEffect } from "react"
+import BookSession from "./components/bookSession"
 
 
 function App() {
@@ -69,6 +70,7 @@ s0.parentNode.insertBefore(s1,s0);
               <Carousel />
               <About />
               <Services />
+              <BookSession />
               <Testimonial />
               <Contact />
             </>

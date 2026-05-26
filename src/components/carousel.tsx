@@ -5,12 +5,14 @@ const slides = [
     title: 'Where your healing, your story, and your next chapter begin.',
     description: 'FELECIA HAMMOND Author. Coach. Mentor. Guide. Helping strong women soften, breathe, and rebuild their lives from the inside out.',
     ctaPrimary: 'Get In Touch',
+    ctaPrimaryHref: '/contact',
     ctaSecondary: 'Book a Session',
+    ctaSecondaryHref: 'https://calendar.app.google/D3Qd7kxgAXbesDXW9',
   },
   {
     title: 'A modern sanctuary for growth',
     description: 'Discover elegant solutions designed to support your wellness journey.',
-    ctaPrimary: 'Join Now',
+    ctaPrimary: 'Learn More',
     ctaSecondary: 'See Services',
   },
   {
@@ -45,7 +47,7 @@ function Carousel() {
               key={slide.title}
               className={`carousel-item ${index === 0 ? 'active' : ''}`}
               style={{
-                backgroundImage: 'linear-gradient(rgba(15, 23, 42, 0.55), rgba(15, 23, 42, 0.55)), url(/images/carousel.jpeg)',
+                backgroundImage: 'linear-gradient(rgba(15, 23, 42, 0.55), rgba(15, 23, 42, 0.55)), url(/images/person/14person.jpg)',
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 minHeight: '70vh',
@@ -60,10 +62,10 @@ function Carousel() {
                     {slide.description}
                   </p>
                   <div className="d-flex gap-3 flex-column flex-sm-row">
-                    <a className="btn btn-light btn-lg shadow-sm" href="#" style={{ color: COLOR.scondary, minWidth: '160px' }}>
+                    <a className="btn btn-light btn-lg shadow-sm" href={slide.ctaPrimaryHref || '#'} style={{ color: COLOR.scondary, minWidth: '160px' }}>
                       {slide.ctaPrimary}
                     </a>
-                    <a className="btn btn-outline-light btn-lg" href="#" style={{ minWidth: '160px', }}>
+                    <a className="btn btn-outline-light btn-lg" href={slide.ctaSecondaryHref || '#'} style={{ minWidth: '160px', }}>
                       {slide.ctaSecondary}
                     </a>
                   </div>

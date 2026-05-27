@@ -1,10 +1,22 @@
 import React, { useState } from 'react'
 import COLOR from '../../constants/color'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import Swal from 'sweetalert2'
 export default function Header() {
   const [showModal, setShowModal] = useState(false)
   const [email, setEmail] = useState('')
+  const location = useLocation()
+
+  const isActive = (path: string) => location.pathname === path
+
+  const getLinkStyle = (path: string) => ({
+    color: isActive(path) ? COLOR.primary : COLOR.scondary,
+    fontWeight: isActive(path) ? '600' : '400',
+    borderBottom: isActive(path) ? `3px solid ${COLOR.primary}` : 'none',
+    paddingBottom: isActive(path) ? '5px' : '0px',
+    transition: 'all 0.3s ease',
+    cursor: 'pointer'
+  })
 
   const openModal = () => setShowModal(true)
   const closeModal = () => {
@@ -68,17 +80,26 @@ export default function Header() {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ms-auto align-items-center">
             <li className="nav-item">
-              <Link className="nav-link" to="/" style={{ color: COLOR.scondary }}>
+              <Link className="nav-link" to="/" style={getLinkStyle('/')}
+                onMouseEnter={(e) => !isActive('/') && (e.currentTarget.style.color = COLOR.primary)}
+                onMouseLeave={(e) => !isActive('/') && (e.currentTarget.style.color = COLOR.scondary)}
+              >
                 Home
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/about" style={{ color: COLOR.scondary }}>
+              <Link className="nav-link" to="/about" style={getLinkStyle('/about')}
+                onMouseEnter={(e) => !isActive('/about') && (e.currentTarget.style.color = COLOR.primary)}
+                onMouseLeave={(e) => !isActive('/about') && (e.currentTarget.style.color = COLOR.scondary)}
+              >
                 About
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/services" style={{ color: COLOR.scondary }}>
+              <Link className="nav-link" to="/services" style={getLinkStyle('/services')}
+                onMouseEnter={(e) => !isActive('/services') && (e.currentTarget.style.color = COLOR.primary)}
+                onMouseLeave={(e) => !isActive('/services') && (e.currentTarget.style.color = COLOR.scondary)}
+              >
                 Services
               </Link>
             </li>

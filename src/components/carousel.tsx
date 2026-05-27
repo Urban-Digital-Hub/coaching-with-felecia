@@ -1,5 +1,6 @@
 import COLOR from '../../constants/color'
-
+import { useEffect } from 'react'
+import Swal from 'sweetalert2'
 const slides = [
   {
     title: 'Where your healing, your story, and your next chapter begin.',
@@ -24,6 +25,37 @@ const slides = [
 ]
 
 function Carousel() {
+    const welcomeMessage = () => {
+      const audio = new Audio('/sound/week7-brrring.mp3')
+  
+      Swal.fire({
+        title: 'Welcome to Coaching with Felicia!',
+        text: `You’ve carried so much for so long. You’ve survived seasons that tried to break you. You’ve held families, careers, relationships, and expectations together with your bare hands. But now… you’re ready for something different. You’re ready for peace. You’re ready for clarity. You’re ready to come home to yourself. This is where your Tactical Pause begins.`,
+  
+        icon: 'success',
+        confirmButtonText: 'Explore Now',
+        background: '#f7f4ed',
+        color: '#1e293b',
+  
+        didOpen: () => {
+          audio.play()
+        },
+  
+        willClose: () => {
+          audio.pause()
+          audio.currentTime = 0
+        }
+      }).then((result) => {
+        if (result.isConfirmed) {
+          audio.play()
+        }
+      })
+    }
+  
+    // Show welcome message on initial load
+    useEffect(() => {
+      welcomeMessage()
+    }, [])
   return (
     <section className="position-relative overflow-hidden">
       <div id="heroCarousel" className="carousel slide carousel-fade" data-bs-ride="carousel">

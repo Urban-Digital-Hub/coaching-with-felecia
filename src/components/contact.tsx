@@ -141,7 +141,7 @@ function Contact() {
                     style={{ minHeight: '170px', padding: '1rem 1.1rem', borderColor: '#ddd', backgroundColor: '#fbf8f0' }}
                   ></textarea>
                 </div>
-                <div className="col-12 text-end">
+                <div className="col-12 text-center">
                   <button type="submit" className="btn btn-primary btn-lg rounded-pill w-100 w-sm-auto px-5" style={{ backgroundColor: COLOR.primary, borderColor: COLOR.primary, display: 'flex', justifySelf: 'center' }}>
                     Send Message
                   </button>

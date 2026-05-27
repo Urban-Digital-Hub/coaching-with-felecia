@@ -12,7 +12,7 @@ function Services() {
               </span>
               <h1 className="display-6 fw-bold mb-4">Elegant services that support every step of your journey.</h1>
               <p className="mb-4 text-muted">
-                Our services are designed for clarity, comfort, and premium results. Each offering blends modern strategy, thoughtful design, and personal attention.
+                My services are designed for clarity, comfort, and premium results. Each offering blends modern strategy, thoughtful design, and personal attention.
               </p>
               <div className="row g-3">
                 <div className="col-sm-6">
@@ -58,7 +58,7 @@ function Services() {
           <div className="col-12 col-lg-6">
             <div className="rounded-4 overflow-hidden shadow-sm" style={{ background: 'linear-gradient(180deg, rgba(153, 113, 21, 0.15), rgba(11, 33, 70, 0.08))' }}>
               <img
-                src="/images/person/3person.jpg"
+                src="public/images/person/first2.jpeg"
                 alt="Service illustration"
                 className="img-fluid w-100 object-fit-cover"
               />

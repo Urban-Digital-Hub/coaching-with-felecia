@@ -180,7 +180,7 @@ function About() {
                 Mission
               </span>
               <h2 className="display-6 fw-bold mb-3">
-                Our mission is clear and uplifting.
+                My mission is clear and uplifting.
               </h2>
               <p className="mb-4 text-muted">
                 We combine skill, empathy, and thoughtful design to make

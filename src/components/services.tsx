@@ -58,7 +58,7 @@ function Services() {
           <div className="col-12 col-lg-6">
             <div className="rounded-4 overflow-hidden shadow-sm" style={{ background: 'linear-gradient(180deg, rgba(153, 113, 21, 0.15), rgba(11, 33, 70, 0.08))' }}>
               <img
-                src="public/images/person/first2.jpeg"
+                src="/images/person/first2.jpeg"
                 alt="Service illustration"
                 className="img-fluid w-100 object-fit-cover"
               />

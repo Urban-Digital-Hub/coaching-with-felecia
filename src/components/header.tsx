@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import COLOR from '../../constants/color'
 import { Link } from 'react-router-dom'
+import Swal from 'sweetalert2'
 export default function Header() {
   const [showModal, setShowModal] = useState(false)
   const [email, setEmail] = useState('')
@@ -14,10 +15,39 @@ export default function Header() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     // Replace with real submit logic as needed
-    if (!email) return
-    alert(`Subscribed with ${email}`)
-    closeModal()
+   
   }
+
+
+  const onSubmit = async (event: FormEvent<HTMLFormElement>) => {
+      event.preventDefault();
+      const formData = new FormData(event.currentTarget);
+  
+      formData.append("access_key", "0e96f1ee-8a50-404c-baab-4973d5e0dbff");
+  
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData
+      });
+  
+      const data = await response.json();
+  
+      if (data.success) {
+        Swal.fire({
+          icon: 'success',
+          title: 'Success',
+          text: 'Your message has been sent successfully!'
+        }); 
+        event.currentTarget.reset();
+      } else {
+        console.log("Error", data);
+        Swal.fire({
+          icon: 'error',
+          title: 'Error',
+          text: 'Failed to send your message. Please try again.'
+        });
+      }
+    };
   return (
     <>
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
@@ -113,13 +143,14 @@ export default function Header() {
                 <button type="button" className="btn-close" aria-label="Close" onClick={closeModal}></button>
               </div>
 
-              <form onSubmit={handleSubmit}>
+              <form onSubmit={onSubmit}>
                 <div className="modal-body">
                   <div className="mb-3">
                     <label className="form-label">Email address</label>
                     <input
                       type="email"
                       className="form-control"
+                      name="subscription_email"
                       placeholder="you@example.com"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}

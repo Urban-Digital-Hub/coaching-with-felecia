@@ -15,12 +15,17 @@ const slides = [
     description: 'Discover elegant solutions designed to support your wellness journey.',
     ctaPrimary: 'Learn More',
     ctaSecondary: 'See Services',
+    ctaSecondaryHref: '/services'
+
   },
   {
     title: 'Confidence, clarity, calm',
     description: 'Experience premium support in a clean, uplifting environment.',
     ctaPrimary: 'Explore',
+    ctaPrimaryHref: '/',
     ctaSecondary: 'Contact Us',
+    ctaSecondaryHref: '/contact',
+
   },
 ]
 
@@ -87,14 +92,14 @@ function Carousel() {
             >
               <div className="carousel-caption d-flex flex-column justify-content-center align-items-start h-100 text-start p-4 p-md-5">
                 <div className="w-100" style={{ maxWidth: '620px' }}>
-                  <h1 className="display-5 fw-bold" style={{ color: COLOR.scondary }}>
+                  <h1 className="display-5 fw-bold" style={{ color: COLOR.primary, fontWeight: 'bold', textShadow: '0 4px 6px rgba(0, 0, 0, 0.1)' }}>
                     {slide.title}
                   </h1>
                   <p className="lead mb-4" style={{ color: '#e8edf4' }}>
                     {slide.description}
                   </p>
                   <div className="d-flex gap-3 flex-column flex-sm-row">
-                    <a className="btn btn-light btn-lg shadow-sm w-100 w-sm-auto" href={slide.ctaPrimaryHref || '#'} style={{ color: COLOR.scondary }}>
+                    <a className="btn btn-light btn-lg shadow-sm w-100 w-sm-auto" href={slide.ctaPrimaryHref || '#'} style={{ color: COLOR.primary }}>
                       {slide.ctaPrimary}
                     </a>
                     <a className="btn btn-outline-light btn-lg w-100 w-sm-auto" href={slide.ctaSecondaryHref || '#'}>

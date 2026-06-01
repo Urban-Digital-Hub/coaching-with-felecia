@@ -37,13 +37,13 @@ function FormMessage() {
     filter: 'drop-shadow(0 10px 20px rgba(153, 115, 21, 0.15))',
   }
 
-  const decorativeIconStyle: React.CSSProperties = {
-    fontSize: '100px',
-    color: COLOR.primary,
-    opacity: 0.1,
-    position: 'absolute',
-    pointerEvents: 'none',
-  }
+  // const decorativeIconStyle: React.CSSProperties = {
+  //   fontSize: '100px',
+  //   color: COLOR.primary,
+  //   opacity: 0.1,
+  //   position: 'absolute',
+  //   pointerEvents: 'none',
+  // }
 
   const titleStyle: React.CSSProperties = {
     fontSize: '32px',

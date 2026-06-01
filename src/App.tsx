@@ -5,12 +5,13 @@ import Services from "./components/services"
 import Footer from "./components/footer"
 import Testimonial from "./components/testimonial"
 import Contact from "./components/contact"
-import { Route, Routes } from "react-router-dom"
+import { Route, Routes, useLocation } from "react-router-dom"
 import Notfound from "./pages/notfound"
 // import Swal from "sweetalert2"
 import { useEffect } from "react"
 import BookSession from "./components/bookSession"
 import Blog from "./components/blog"
+import FormMessage from "./pages/message"
 
 declare global {
   interface Window {
@@ -66,9 +67,12 @@ function App() {
   }, [])
 
 
+  const location = useLocation()
+  const isFormMessagePage = location.pathname === "/form-message"
+
   return (
     <>
-      <Header />
+      {!isFormMessagePage && <Header />}
 
       <Routes>
         {/* Home route composes the main landing sections */}
@@ -93,9 +97,10 @@ function App() {
         <Route path="*" element={<Notfound />} />
         <Route path="/testimonial" element={<Testimonial />} />
         <Route path="/blog" element={<Blog />} />
+        <Route path="/form-message" element={<FormMessage />} />
       </Routes>
 
-      <Footer />
+      {!isFormMessagePage && <Footer />}
 
     </>
   )

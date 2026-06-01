@@ -11,7 +11,7 @@ function BookSession() {
 
     window.open(
     //   'https://calendar.app.google/D3Qd7kxgAXbesDXW9',
-          'https://calendly.com/blueinv73/30min',
+          import.meta.env.VITE_BOOKING_URL,
       '_blank'
     )
   }

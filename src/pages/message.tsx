@@ -1,5 +1,6 @@
 import COLOR from '../../constants/color'
 import { FiCheckCircle, FiMail, FiArrowRight } from 'react-icons/fi'
+import { Link } from 'react-router-dom'
 import { useState } from 'react'
 
 function FormMessage() {
@@ -141,15 +142,15 @@ function FormMessage() {
               Thank you for reaching out to us. We've received your message and will get back to you as soon as possible. We appreciate your interest!
             </p>
 
-            <a
-              href="/"
+            <Link
+              to="/"
               style={buttonStyle}
               onMouseEnter={() => setIsHovering(true)}
               onMouseLeave={() => setIsHovering(false)}
             >
               Back to Home
               <FiArrowRight style={{ fontSize: '18px' }} />
-            </a>
+            </Link>
           </div>
         </div>
       </div>

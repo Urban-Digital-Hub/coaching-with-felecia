@@ -1,6 +1,6 @@
 import COLOR from '../../constants/color'
 import { FaDumbbell, FaLeaf, FaCheckCircle, FaHeart, FaArrowRight, FaClipboardCheck, FaHandsHelping, FaLightbulb, FaShieldAlt } from 'react-icons/fa'
-
+import { Link } from 'react-router-dom'
 const promiseIcons = {
   Care: FaHandsHelping,
   Expertise: FaLightbulb,
@@ -139,9 +139,9 @@ function FitnessandLifestyle() {
               <p className="mb-4 text-white-75">
                 Your first workout, nutrition plan, or check-in will be sent after your intake form is complete. I’m proud of you for choosing this journey.
               </p>
-              <a className="btn btn-light btn-lg rounded-pill" href="/contact" style={{ color: COLOR.scondary }}>
+              <Link className="btn btn-light btn-lg rounded-pill" to="/contact" style={{ color: COLOR.scondary }}>
                 Start Your Intake
-              </a>
+              </Link>
             </div>
           </div>
         </div>

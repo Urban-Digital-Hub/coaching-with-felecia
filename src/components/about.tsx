@@ -1,4 +1,5 @@
 import COLOR from "../../constants/color";
+import { Link } from 'react-router-dom'
 
 function About() {
   return (
@@ -123,13 +124,13 @@ function About() {
                     </div>
                   </div>
                 </div> */}
-                <a
-                  href="#contact"
+                <Link
+                  to="/contact"
                   className="btn btn-close-white w-100 w-sm-auto"
                   style={{ backgroundColor: COLOR.scondary, color: "#fff" }}
                 >
                   Learn More About Me
-                </a>
+                </Link>
               </div>
             </div>
           </div>

@@ -194,7 +194,7 @@ function Coaching() {
               <p className="mb-4 text-white-75">
                 Your healing doesn’t have to be dramatic. It just has to be intentional. Book a session, start your Tactical Pause, and come home to yourself.
               </p>
-              <a className="btn btn-light btn-lg rounded-pill" href="/contact" style={{ color: COLOR.scondary }}>
+              <a className="btn btn-light btn-lg rounded-pill" href="https://calendly.com/hammondf17" style={{ color: COLOR.scondary }}>
                 Book a Session
               </a>
             </div>

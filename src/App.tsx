@@ -103,6 +103,7 @@ function App() {
         <Route path="/blog" element={<Blog />} />
         <Route path="/form-message" element={<FormMessage />} />
         <Route path ="/coaching" element={<Coaching />} />
+        <Route path="/fitness-lifestyle" element={<FitnessandLifestyle />} />
       </Routes>
 
       {!isFormMessagePage && <Footer />}

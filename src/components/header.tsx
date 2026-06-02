@@ -105,7 +105,7 @@ export default function Header() {
             </li>
             <li className="nav-item dropdown">
               <a
-                className="nav-link dropdown-toggle"
+                className="nav-link dropdown-toggle "
                 href="#"
                 id="moreDropdown"
                 role="button"
@@ -117,18 +117,20 @@ export default function Header() {
               </a>
               <ul className="dropdown-menu dropdown-menu-end" aria-labelledby="moreDropdown">
                 <li>
-                  <a className="dropdown-item" href="#">
+                  <Link className="dropdown-item" to="/coaching">
                     coaching Programs
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a className="dropdown-item" href="#">
+                  <Link className="dropdown-item" to="/fitness-lifestyle">
+
                    Fitness & Lifestyle
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a className="dropdown-item" href="#">
-                    Menstorship & Business </a>
+                  <Link className="dropdown-item" to="/mentoring-business">
+                    Menstorship & Business
+                  </Link>
                 </li>
                 <li>
                   <Link className="dropdown-item" to="/testimonial">

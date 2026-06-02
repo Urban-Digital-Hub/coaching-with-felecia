@@ -27,7 +27,7 @@ function FormMessage() {
   const iconContainerStyle: React.CSSProperties = {
     marginBottom: '30px',
     display: 'flex',
-    justifyContent: 'center',
+    justifyContent: 'center',                                                                                                                                                                                                                                                                                                                     
     animation: 'bounce 0.8s ease-out',
   }
 

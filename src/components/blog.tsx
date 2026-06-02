@@ -286,7 +286,7 @@ function Blog() {
               <div className="p-5 rounded-4 text-center" style={{ backgroundColor: '#f7f3ea', border: `2px solid ${COLOR.primary}` }}>
                 <h3 className="fw-bold mb-3">Don't Miss Out on New Content</h3>
                 <p className="text-muted mb-4">
-                  Subscribe to our YouTube channel for weekly tips, guided sessions, and wellness insights.
+                  Subscribe to my YouTube channel for weekly tips, guided sessions, and wellness insights.
                 </p>
                 <a 
                   href="https://youtube.com/@yourwellnessmatter?feature=shared" 

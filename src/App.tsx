@@ -12,6 +12,8 @@ import { useEffect } from "react"
 import BookSession from "./components/bookSession"
 import Blog from "./components/blog"
 import FormMessage from "./pages/message"
+import Coaching from "./components/coaching"
+import FitnessandLifestyle from "./components/fitnessandlifestyle"
 
 declare global {
   interface Window {
@@ -86,6 +88,8 @@ function App() {
               <BookSession />
               <Testimonial />
               <Blog />
+              <Coaching />
+              <FitnessandLifestyle />
               <Contact />
             </>
           }
@@ -98,6 +102,7 @@ function App() {
         <Route path="/testimonial" element={<Testimonial />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/form-message" element={<FormMessage />} />
+        <Route path ="/coaching" element={<Coaching />} />
       </Routes>
 
       {!isFormMessagePage && <Footer />}

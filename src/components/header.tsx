@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
 import COLOR from '../../constants/color'
-import { Link, useLocation } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import Swal from 'sweetalert2'
 export default function Header() {
   const [showModal, setShowModal] = useState(false)
   const [email, setEmail] = useState('')
   const location = useLocation()
+  const navigate = useNavigate()
 
   const isActive = (path: string) => location.pathname === path
 
@@ -44,15 +45,18 @@ export default function Header() {
         Swal.fire({
           icon: 'success',
           title: 'Success',
-          text: 'Your message has been sent successfully!'
-        }); 
-        event.currentTarget.reset();
+          text: 'You have subscribed successfully!'
+        }).then(() => {
+          closeModal();
+          navigate('/'); // Redirect to home page after successful subscription
+        });
+      
       } else {
         console.log("Error", data);
         Swal.fire({
           icon: 'error',
           title: 'Error',
-          text: 'Failed to send your message. Please try again.'
+          text: 'Failed to subscribe. Please try again.'
         });
       }
     };
@@ -169,7 +173,7 @@ export default function Header() {
                     <input
                       type="email"
                       className="form-control"
-                      name="subscription_email"
+                      name="subscription email"
                       placeholder="you@example.com"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}

@@ -1,10 +1,44 @@
 import COLOR from '../../constants/color'
 import { FaInstagram, FaFacebookF, FaLinkedinIn, FaTwitter } from 'react-icons/fa'
 import { SiTiktok } from 'react-icons/si'
-import { Link } from 'react-router-dom'
-
+import { Link, useNavigate } from 'react-router-dom'
+import Swal from 'sweetalert2'
+import { useState } from 'react'
 function Footer() {
   const currentYear = new Date().getFullYear()
+    const [email, setEmail] = useState('')
+    const navigate = useNavigate()
+  const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+        event.preventDefault();
+        const formData = new FormData(event.currentTarget);
+    
+        formData.append("access_key", "0e96f1ee-8a50-404c-baab-4973d5e0dbff");
+    
+        const response = await fetch("https://api.web3forms.com/submit", {
+          method: "POST",
+          body: formData
+        });
+    
+        const data = await response.json();
+        console.log("data", data);
+    
+        if (data.success) {
+          Swal.fire({
+            icon: 'success',
+            title: 'Success',
+            text: 'You have subscribed successfully!'
+          }).then(() => {
+            navigate('/'); // Redirect to home page after successful subscription
+          });
+        } else {
+          console.log("Error", data);
+          Swal.fire({
+            icon: 'error',
+            title: 'Error',
+            text: 'Failed to subscribe. Please try again.'
+          });
+        }
+      };
   return (
     <footer className="py-5" style={{ backgroundColor: COLOR.scondary, color: '#f1f3f8' }}>
       <div className="container">
@@ -111,7 +145,7 @@ function Footer() {
           <div className="col-12 col-lg-3">
             <h6 className="mb-3 text-white"><b>Newsletter</b></h6>
             <p className="text-white">Stay in touch for new services and updates.</p>
-            <form className="d-flex flex-column gap-3">
+            <form className="d-flex flex-column gap-3" onSubmit={onSubmit}>
               <div className="input-group shadow-sm">
                 <span className="input-group-text" style={{ backgroundColor: COLOR.primary, borderColor: COLOR.primary, color: '#fff' }}>
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -120,8 +154,12 @@ function Footer() {
                 </span>
                 <input
                   type="email"
-                  className="form-control bg-white border-0 text-white"
-                  placeholder="Email address"
+                  className="form-control bg-white border-0 text-dark"
+                  name="Email Subscription"
+                  placeholder="you@example.com"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
                   style={{ minHeight: '48px' }}
                 />
               </div>

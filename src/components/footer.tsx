@@ -133,7 +133,9 @@ function Footer() {
               </li>
               <li className="mb-2 d-flex align-items-center gap-2">
                 <span style={{ width: '6px', height: '6px', borderRadius: '50%', backgroundColor: COLOR.primary }} />
-                <a href="#" className="text-white text-decoration-none">Terms</a>
+                <Link to={"/terms"} className="text-white text-decoration-none">
+                  Terms
+                </Link>
               </li>
               <li className="d-flex align-items-center gap-2">
                 <span style={{ width: '6px', height: '6px', borderRadius: '50%', backgroundColor: COLOR.primary }} />

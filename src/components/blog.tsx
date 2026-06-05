@@ -172,7 +172,7 @@ function Blog() {
   return (
     <div>
       {/* Blog Posts Section */}
-      <section className="py-5" style={{ backgroundColor: '#f7f3ea', color: COLOR.scondary }}>
+      <section className="py-5" style={{ backgroundColor: '#f7f3ea', color: COLOR.secondary }}>
         <div className="container">
           <div className="text-center mb-5">
             <p className="text-uppercase fw-bold mb-2" style={{ letterSpacing: '0.24em', color: COLOR.primary }}>
@@ -195,7 +195,7 @@ function Blog() {
                     <p className="text-muted mb-0 small">{post.date} • {post.readTime}</p>
                   </div>
                   
-                  <h4 className="fw-bold mb-3" style={{ color: COLOR.scondary, lineHeight: '1.5' }}>
+                  <h4 className="fw-bold mb-3" style={{ color: COLOR.secondary, lineHeight: '1.5' }}>
                     {post.title}
                   </h4>
                   
@@ -217,7 +217,7 @@ function Blog() {
       </section>
 
       {/* YouTube Resources Section */}
-      <section className="py-5" style={{ backgroundColor: '#ffffff', color: COLOR.scondary }}>
+      <section className="py-5" style={{ backgroundColor: '#ffffff', color: COLOR.secondary }}>
         <div className="container">
           <div className="text-center mb-5">
             <p className="text-uppercase fw-bold mb-2" style={{ letterSpacing: '0.24em', color: COLOR.primary }}>
@@ -254,7 +254,7 @@ function Blog() {
                       </span>
                     </div>
 
-                    <h5 className="fw-bold mb-2" style={{ color: COLOR.scondary, lineHeight: '1.4' }}>
+                    <h5 className="fw-bold mb-2" style={{ color: COLOR.secondary, lineHeight: '1.4' }}>
                       {video.title}
                     </h5>
 
@@ -304,7 +304,7 @@ function Blog() {
       </section>
 
       {/* Newsletter Signup */}
-      <section className="py-5" style={{ backgroundColor: '#f7f3ea', color: COLOR.scondary }}>
+      <section className="py-5" style={{ backgroundColor: '#f7f3ea', color: COLOR.secondary }}>
         <div className="container">
           <div className="row">
             <div className="col-12 col-lg-8 mx-auto">

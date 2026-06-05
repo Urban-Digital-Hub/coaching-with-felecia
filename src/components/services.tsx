@@ -2,7 +2,7 @@ import COLOR from '../../constants/color'
 
 function Services() {
   return (
-    <section className="py-5" style={{ backgroundColor: '#f7f3ea', color: COLOR.scondary }}>
+    <section className="py-5" style={{ backgroundColor: '#f7f3ea', color: COLOR.secondary }}>
       <div className="container">
         <div className="row align-items-center gy-5">
           <div className="col-12 col-lg-6">
@@ -69,25 +69,25 @@ function Services() {
         <div className="row g-4 mt-5">
           <div className="col-12 col-lg-4">
             <div className="p-4 rounded-4 h-100" style={{ backgroundColor: '#ffffff', border: `1px solid ${COLOR.primary}20` }}>
-              <h5 style={{ color: COLOR.scondary }}>Consultation</h5>
+              <h5 style={{ color: COLOR.secondary }}>Consultation</h5>
               <p className="text-muted">Personalized introductions and clear paths to the right service for you.</p>
             </div>
           </div>
           <div className="col-12 col-lg-4">
             <div className="p-4 rounded-4 h-100" style={{ backgroundColor: '#ffffff', border: `1px solid ${COLOR.primary}20` }}>
-              <h5 style={{ color: COLOR.scondary }}>Strategy</h5>
+              <h5 style={{ color: COLOR.secondary }}>Strategy</h5>
               <p className="text-muted">Focused plans that help you move forward with confidence and ease.</p>
             </div>
           </div>
           <div className="col-12 col-lg-4">
             <div className="p-4 rounded-4 h-100" style={{ backgroundColor: '#ffffff', border: `1px solid ${COLOR.primary}20` }}>
-              <h5 style={{ color: COLOR.scondary }}>Growth</h5>
+              <h5 style={{ color: COLOR.secondary }}>Growth</h5>
               <p className="text-muted">Support that evolves with your progress and keeps goals within reach.</p>
             </div>
           </div>
         </div>
 
-        <div className="rounded-4 mt-5 p-5 text-center" style={{ backgroundColor: COLOR.scondary, color: '#fff' }}>
+        <div className="rounded-4 mt-5 p-5 text-center" style={{ backgroundColor: COLOR.secondary, color: '#fff' }}>
           <h2 className="fw-bold mb-3">A services experience built around you.</h2>
           <p className="mb-4 text-white-75">From one-on-one guidance to premium digital support, our services bring calm, clarity, and confidence to every part of your journey.</p>
           <a className="btn btn-outline-light btn-lg" href="https://calendly.com/hammondf17" target='blank'  rel="noreferrer" style={{ borderColor: '#fff' }}>

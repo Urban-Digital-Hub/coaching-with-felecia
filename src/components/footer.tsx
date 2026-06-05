@@ -40,7 +40,7 @@ function Footer() {
         }
       };
   return (
-    <footer className="py-5" style={{ backgroundColor: COLOR.scondary, color: '#f1f3f8' }}>
+    <footer className="py-5" style={{ backgroundColor: COLOR.secondary, color: '#f1f3f8' }}>
       <div className="container">
         <div className="row gy-4 gy-lg-0">
           <div className="col-12 col-lg-4">

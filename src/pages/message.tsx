@@ -11,7 +11,7 @@ function FormMessage() {
     alignItems: 'center',
     justifyContent: 'center',
     minHeight: '100vh',
-    background: `linear-gradient(135deg, ${COLOR.scondary}05 0%, ${COLOR.primary}05 100%)`,
+    background: `linear-gradient(135deg, ${COLOR.secondary}05 0%, ${COLOR.primary}05 100%)`,
     padding: '20px',
   }
 
@@ -49,7 +49,7 @@ function FormMessage() {
   const titleStyle: React.CSSProperties = {
     fontSize: '32px',
     fontWeight: '700',
-    color: COLOR.scondary,
+    color: COLOR.secondary,
     marginBottom: '15px',
     fontFamily: 'inherit',
   }
@@ -74,7 +74,7 @@ function FormMessage() {
     display: 'inline-flex',
     alignItems: 'center',
     gap: '10px',
-    backgroundColor: isHovering ? COLOR.scondary : COLOR.primary,
+    backgroundColor: isHovering ? COLOR.secondary : COLOR.primary,
     color: COLOR.white,
     padding: '15px 35px',
     borderRadius: '50px',

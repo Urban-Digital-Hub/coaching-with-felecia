@@ -23,7 +23,7 @@ const feedback = [
 
 function Testimonial() {
   return (
-    <section className="py-5" style={{ backgroundColor: '#f7f4ed', color: COLOR.scondary }}>
+    <section className="py-5" style={{ backgroundColor: '#f7f4ed', color: COLOR.secondary }}>
       <div className="container">
         <div className="text-center mb-5">
           <p className="text-uppercase fw-bold mb-2" style={{ letterSpacing: '0.24em', color: COLOR.primary }}>
@@ -45,7 +45,7 @@ function Testimonial() {
                     <img src={item.image} alt={item.name} className="w-100 h-100 object-fit-cover" />
                   </div>
                   <div>
-                    <h5 className="mb-1" style={{ color: COLOR.scondary }}>{item.name}</h5>
+                    <h5 className="mb-1" style={{ color: COLOR.secondary }}>{item.name}</h5>
                     <p className="mb-0 text-muted">{item.role}</p>
                   </div>
                 </div>

@@ -11,7 +11,7 @@ export default function Header() {
   const isActive = (path: string) => location.pathname === path
 
   const getLinkStyle = (path: string) => ({
-    color: isActive(path) ? COLOR.primary : COLOR.scondary,
+    color: isActive(path) ? COLOR.primary : COLOR.secondary,
     fontWeight: isActive(path) ? '600' : '400',
     borderBottom: isActive(path) ? `3px solid ${COLOR.primary}` : 'none',
     paddingBottom: isActive(path) ? '5px' : '0px',
@@ -86,7 +86,7 @@ export default function Header() {
             <li className="nav-item">
               <Link className="nav-link" to="/" style={getLinkStyle('/')}
                 onMouseEnter={(e) => !isActive('/') && (e.currentTarget.style.color = COLOR.primary)}
-                onMouseLeave={(e) => !isActive('/') && (e.currentTarget.style.color = COLOR.scondary)}
+                onMouseLeave={(e) => !isActive('/') && (e.currentTarget.style.color = COLOR.secondary)}
               >
                 Home
               </Link>
@@ -94,7 +94,7 @@ export default function Header() {
             <li className="nav-item">
               <Link className="nav-link" to="/about" style={getLinkStyle('/about')}
                 onMouseEnter={(e) => !isActive('/about') && (e.currentTarget.style.color = COLOR.primary)}
-                onMouseLeave={(e) => !isActive('/about') && (e.currentTarget.style.color = COLOR.scondary)}
+                onMouseLeave={(e) => !isActive('/about') && (e.currentTarget.style.color = COLOR.secondary)}
               >
                 About
               </Link>
@@ -102,7 +102,7 @@ export default function Header() {
             <li className="nav-item">
               <Link className="nav-link" to="/services" style={getLinkStyle('/services')}
                 onMouseEnter={(e) => !isActive('/services') && (e.currentTarget.style.color = COLOR.primary)}
-                onMouseLeave={(e) => !isActive('/services') && (e.currentTarget.style.color = COLOR.scondary)}
+                onMouseLeave={(e) => !isActive('/services') && (e.currentTarget.style.color = COLOR.secondary)}
               >
                 Services
               </Link>
@@ -115,7 +115,7 @@ export default function Header() {
                 role="button"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
-                style={{ color: COLOR.scondary }}
+                style={{ color: COLOR.secondary }}
               >
                 More
               </a>
@@ -183,7 +183,7 @@ export default function Header() {
                 </div>
 
                 <div className="modal-footer">
-                  <button type="button" className="btn btn-secondary" onClick={closeModal} style={{ backgroundColor: COLOR.scondary}}>
+                  <button type="button" className="btn btn-secondary" onClick={closeModal} style={{ backgroundColor: COLOR.secondary}}>
                     Close
                   </button>
                   <button type="submit" className="btn btn-primary" style={{ backgroundColor: COLOR.primary, borderColor: COLOR.primary }}>

@@ -15,6 +15,7 @@ import FormMessage from "./pages/message"
 import Coaching from "./components/coaching"
 import FitnessandLifestyle from "./components/fitnessandlifestyle"
 import Term from "./components/term"
+import ClientIntakeModule from "./components/clientintake"
 declare global {
   interface Window {
     Tawk_API?: Record<string, unknown>
@@ -92,6 +93,7 @@ function App() {
               <FitnessandLifestyle />
               <Contact />
               {/* <Term /> */}
+              {/* <ClientIntakeModule />  */}
             </>
           }
         />
@@ -106,6 +108,7 @@ function App() {
         <Route path ="/coaching" element={<Coaching />} />
         <Route path="/fitness-lifestyle" element={<FitnessandLifestyle />} />
         <Route path="/terms" element={<Term />} />
+        <Route path="/client-intake" element={<ClientIntakeModule />} />
       </Routes>
 
       {!isFormMessagePage && <Footer />}

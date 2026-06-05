@@ -12,7 +12,7 @@ const promiseIcons = {
 
 function Coaching() {
   return (
-    <section className="py-5" style={{ backgroundColor: '#f7f2e8', color: COLOR.scondary }}>
+    <section className="py-5" style={{ backgroundColor: '#f7f2e8', color: COLOR.secondary }}>
       <div className="container">
         <div className="row gx-5 align-items-center mb-5">
           <div className="col-12 col-lg-6">
@@ -61,8 +61,8 @@ function Coaching() {
         <div className="row g-4 mb-5">
           <div className="col-12 col-md-6">
             <div className="p-5 rounded-5 h-100" style={{ backgroundColor: '#fff', border: `1px solid ${COLOR.primary}15`, boxShadow: '0 20px 45px rgba(11, 33, 70, 0.04)' }}>
-              <h3 className="mb-4 d-flex align-items-center" style={{ color: COLOR.scondary }}>
-                <FaHeartbeat className="me-3" style={{ color: COLOR.scondary }} />The Tactical Pause™ Mentorship
+              <h3 className="mb-4 d-flex align-items-center" style={{ color: COLOR.secondary }}>
+                <FaHeartbeat className="me-3" style={{ color: COLOR.secondary }} />The Tactical Pause™ Mentorship
               </h3>
               <p className="text-muted mb-3">A 12-week emotional healing journey for women ready to stop surviving and start living.</p>
               <p className="fw-semibold mb-4">Investment: $1,800 paid in full or $650/month for 3 months</p>
@@ -86,8 +86,8 @@ function Coaching() {
 
           <div className="col-12 col-md-6">
             <div className="p-5 rounded-5 h-100" style={{ backgroundColor: '#fff', border: `1px solid ${COLOR.primary}15`, boxShadow: '0 20px 45px rgba(11, 33, 70, 0.04)' }}>
-              <h3 className="mb-4 d-flex align-items-center" style={{ color: COLOR.scondary }}>
-                <FaShieldAlt className="me-3" style={{ color: COLOR.scondary }} />1:1 Emotional Healing & Transformation Coaching
+              <h3 className="mb-4 d-flex align-items-center" style={{ color: COLOR.secondary }}>
+                <FaShieldAlt className="me-3" style={{ color: COLOR.secondary }} />1:1 Emotional Healing & Transformation Coaching
               </h3>
               <p className="text-muted mb-3">Private sessions for deep, personalized support through emotional triggers, identity shifts, boundaries, and the patterns that keep you stuck.</p>
               <p className="fw-semibold mb-4">Investment:</p>
@@ -139,8 +139,8 @@ function Coaching() {
             return (
               <div key={track.title} className="col-12 col-md-6">
                 <div className="p-5 rounded-5 h-100" style={{ backgroundColor: '#fff', border: `1px solid ${COLOR.primary}15`, boxShadow: '0 20px 45px rgba(11, 33, 70, 0.04)' }}>
-                  <h5 className="mb-3 d-flex align-items-center" style={{ color: COLOR.scondary }}>
-                    <Icon className="me-3" style={{ color: COLOR.scondary }} />{track.title}
+                  <h5 className="mb-3 d-flex align-items-center" style={{ color: COLOR.secondary }}>
+                    <Icon className="me-3" style={{ color: COLOR.secondary }} />{track.title}
                   </h5>
                   <p className="text-muted mb-3">{track.description}</p>
                   <p className="fw-semibold mb-3">{track.investment}</p>
@@ -161,8 +161,8 @@ function Coaching() {
         <div className="row g-4 align-items-stretch mb-5">
           <div className="col-12 col-lg-8">
             <div className="p-5 rounded-5 h-100" style={{ backgroundColor: '#fff', border: `1px solid ${COLOR.primary}15`, boxShadow: '0 20px 45px rgba(11, 33, 70, 0.04)' }}>
-              <h3 className="mb-4 d-flex align-items-center" style={{ color: COLOR.scondary }}>
-                <FaClipboardCheck className="me-3" style={{ color: COLOR.scondary }} />My Promise to You
+              <h3 className="mb-4 d-flex align-items-center" style={{ color: COLOR.secondary }}>
+                <FaClipboardCheck className="me-3" style={{ color: COLOR.secondary }} />My Promise to You
               </h3>
               <p className="text-muted mb-4">
                 I will support you with care, expertise, accountability, compassion, trauma-informed guidance, and a pace that honors your nervous system.
@@ -194,7 +194,7 @@ function Coaching() {
               <p className="mb-4 text-white-75">
                 Your healing doesn’t have to be dramatic. It just has to be intentional. Book a session, start your Tactical Pause, and come home to yourself.
               </p>
-              <a className="btn btn-light btn-lg rounded-pill" href="https://calendly.com/hammondf17" style={{ color: COLOR.scondary }}>
+              <a className="btn btn-light btn-lg rounded-pill" href="https://calendly.com/hammondf17" style={{ color: COLOR.secondary }}>
                 Book a Session
               </a>
             </div>

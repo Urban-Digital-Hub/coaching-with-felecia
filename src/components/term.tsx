@@ -1,11 +1,10 @@
-import React from "react";
 import COLOR from "../../constants/color";
 export default function TermsModule() {
   return (
     <div className="container py-5">
       {/* Page Header */}
       <div className="text-center mb-5">
-        <h1 className="fw-bold" style={{ color: COLOR.scondary }}>
+        <h1 className="fw-bold" style={{ color: COLOR.secondary }}>
            CLIENT AGREEMENT & COACHING CONTRACT
         </h1>
         <p className="text-muted fs-5">
@@ -125,7 +124,7 @@ export default function TermsModule() {
 
       {/* Agreement */}
       <div className="text-center mt-5 p-4 rounded"
-        style={{ backgroundColor: COLOR.scondary, color: COLOR.white }}>
+        style={{ backgroundColor: COLOR.secondary, color: COLOR.white }}>
         <h4 className="fw-bold">Agreement</h4>
         <p className="mb-0">
           By booking services, you agree to these terms and enter this coaching relationship voluntarily.

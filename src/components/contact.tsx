@@ -38,7 +38,7 @@ function Contact() {
   };
 
   return (
-    <section className="py-5" style={{ backgroundColor: '#f7f3ea', color: COLOR.scondary }}>
+    <section className="py-5" style={{ backgroundColor: '#f7f3ea', color: COLOR.secondary }}>
       <div className="container">
         <div className="row align-items-center gy-5">
           <div className="col-12 col-lg-6">
@@ -60,7 +60,7 @@ function Contact() {
                   </div>
                   <div>
                     <a href='mailto:mentoringandcoaching@yourwellnessmatters.net' style={{ textDecoration: 'none'}}>
-                    <h6 className="mb-1" style={{ color: COLOR.scondary }}>Email</h6>
+                    <h6 className="mb-1" style={{ color: COLOR.secondary }}>Email</h6>
                     <p className="mb-0 text-muted" style={{ fontSize: '0.770rem' }}>mentoringandcoaching@yourwellnessmatters.net</p>
                     </a>
                   </div>
@@ -73,7 +73,7 @@ function Contact() {
                     <FiMapPin size={18} />
                   </div>
                   <div>
-                    <h6 className="mb-1" style={{ color: COLOR.scondary }}>Address</h6>
+                    <h6 className="mb-1" style={{ color: COLOR.secondary }}>Address</h6>
                     <p className="mb-0 text-muted">123 Elegant Street, City, Country</p>
                   </div>
                 </div>
@@ -86,7 +86,7 @@ function Contact() {
                   </div>
                   <div>
                     <a href='tel:+16086719776' style={{ textDecoration: 'none'}}>
-                    <h6 className="mb-1" style={{ color: COLOR.scondary }}>Phone</h6>
+                    <h6 className="mb-1" style={{ color: COLOR.secondary }}>Phone</h6>
                     <p className="mb-0 text-muted">+1 608 671 9776</p>
                     </a>
                   </div>
@@ -97,7 +97,7 @@ function Contact() {
 
           <div className="col-12 col-lg-6">
             <div className="rounded-4 p-5" style={{ backgroundColor: '#ffffff', boxShadow: '0 24px 60px rgba(11, 33, 70, 0.08)' }}>
-              <h3 className="fw-bold mb-4" style={{ color: COLOR.scondary }}>Send us a message</h3>
+              <h3 className="fw-bold mb-4" style={{ color: COLOR.secondary }}>Send us a message</h3>
               <form className="row g-3" onSubmit={onSubmit}>
                 <div className="col-md-6">
                   <label className="form-label text-muted">Name</label>

@@ -5,7 +5,7 @@ function About() {
   return (
     <section
       className="py-5"
-      style={{ backgroundColor: "#f7f4ed", color: COLOR.scondary }}
+      style={{ backgroundColor: "#f7f4ed", color: COLOR.secondary }}
     >
       <div className="container">
         <div className="row align-items-center g-5">
@@ -127,7 +127,7 @@ function About() {
                 <Link
                   to="/contact"
                   className="btn btn-close-white w-100 w-sm-auto"
-                  style={{ backgroundColor: COLOR.scondary, color: "#fff" }}
+                  style={{ backgroundColor: COLOR.secondary, color: "#fff" }}
                 >
                   Learn More About Me
                 </Link>
@@ -176,7 +176,7 @@ function About() {
             >
               <span
                 className="badge rounded-pill px-3 py-2 mb-3"
-                style={{ backgroundColor: COLOR.scondary, color: "#fff" }}
+                style={{ backgroundColor: COLOR.secondary, color: "#fff" }}
               >
                 Mission
               </span>

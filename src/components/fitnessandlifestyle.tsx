@@ -12,7 +12,7 @@ const promiseIcons = {
 
 function FitnessandLifestyle() {
   return (
-    <section className="py-5" style={{ backgroundColor: '#f7f2e8', color: COLOR.scondary }}>
+    <section className="py-5" style={{ backgroundColor: '#f7f2e8', color: COLOR.secondary }}>
       <div className="container">
         <div className="row gx-5 align-items-center mb-5">
           <div className="col-12 col-lg-6">
@@ -62,8 +62,8 @@ function FitnessandLifestyle() {
         <div className="row g-4 mb-5">
           <div className="col-12 col-md-6">
             <div className="p-5 rounded-5 h-100" style={{ backgroundColor: '#fff', border: `1px solid ${COLOR.primary}15`, boxShadow: '0 20px 45px rgba(11, 33, 70, 0.04)' }}>
-              <h3 className="mb-4 d-flex align-items-center" style={{ color: COLOR.scondary }}>
-                <FaDumbbell className="me-3" style={{ color: COLOR.scondary }} />Fitness Coaching
+              <h3 className="mb-4 d-flex align-items-center" style={{ color: COLOR.secondary }}>
+                <FaDumbbell className="me-3" style={{ color: COLOR.secondary }} />Fitness Coaching
               </h3>
               <ul className="list-unstyled mb-0" style={{ paddingLeft: 0 }}>
                 {[
@@ -83,8 +83,8 @@ function FitnessandLifestyle() {
 
           <div className="col-12 col-md-6">
             <div className="p-5 rounded-5 h-100" style={{ backgroundColor: '#fff', border: `1px solid ${COLOR.primary}15`, boxShadow: '0 20px 45px rgba(11, 33, 70, 0.04)' }}>
-              <h3 className="mb-4 d-flex align-items-center" style={{ color: COLOR.scondary }}>
-                <FaLeaf className="me-3" style={{ color: COLOR.scondary }} />Nutrition Coaching
+              <h3 className="mb-4 d-flex align-items-center" style={{ color: COLOR.secondary }}>
+                <FaLeaf className="me-3" style={{ color: COLOR.secondary }} />Nutrition Coaching
               </h3>
               <ul className="list-unstyled mb-0" style={{ paddingLeft: 0 }}>
                 {[
@@ -106,8 +106,8 @@ function FitnessandLifestyle() {
         <div className="row g-4 align-items-stretch">
           <div className="col-12 col-lg-8">
             <div className="p-5 rounded-5 h-100" style={{ backgroundColor: '#fff', border: `1px solid ${COLOR.primary}15`, boxShadow: '0 20px 45px rgba(11, 33, 70, 0.04)' }}>
-              <h3 className="mb-4 d-flex align-items-center" style={{ color: COLOR.scondary }}>
-                <FaClipboardCheck className="me-3" style={{ color: COLOR.scondary }} />My Promise to You
+              <h3 className="mb-4 d-flex align-items-center" style={{ color: COLOR.secondary }}>
+                <FaClipboardCheck className="me-3" style={{ color: COLOR.secondary }} />My Promise to You
               </h3>
               <p className="text-muted mb-4">
                 I will support you with care, expertise, accountability, compassion, trauma-informed guidance, and a pace that honors your nervous system.
@@ -139,7 +139,7 @@ function FitnessandLifestyle() {
               <p className="mb-4 text-white-75">
                 Your first workout, nutrition plan, or check-in will be sent after your intake form is complete. I’m proud of you for choosing this journey.
               </p>
-              <Link className="btn btn-light btn-lg rounded-pill" to="/contact" style={{ color: COLOR.scondary }}>
+              <Link className="btn btn-light btn-lg rounded-pill" to="/client-intake" style={{ color: COLOR.secondary }}>
                 Start Your Intake
               </Link>
             </div>

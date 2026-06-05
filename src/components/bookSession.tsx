@@ -33,7 +33,7 @@ function BookSession() {
 
               <h2
                 className="fw-bold mb-3"
-                style={{ color: COLOR.scondary }}
+                style={{ color: COLOR.secondary }}
               >
                 Book a Session
               </h2>

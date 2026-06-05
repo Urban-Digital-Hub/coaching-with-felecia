@@ -71,7 +71,7 @@ function Carousel() {
               type="button"
               data-bs-target="#heroCarousel"
               data-bs-slide-to={index}
-              className={index === 0 ? 'active' : ''}m  
+              className={index === 0 ? 'active' : ''}
               aria-current={index === 0 ? 'true' : undefined}
               aria-label={`Slide ${index + 1}`}
             />

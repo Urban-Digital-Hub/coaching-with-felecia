@@ -11,7 +11,7 @@ export default defineConfig({
       },
     }),
     sitemap({
-      hostname: 'https://coachingandmentorshipwithfelecia.com/',
+      hostname: 'https://coachingandmentorshipwithfelecia.com',
       generateRobotsTxt: false,
       dynamicRoutes: [
         '/about',

@@ -50,7 +50,7 @@ function Coaching() {
           <div className="col-12 col-lg-6">
             <div className="rounded-4 overflow-hidden shadow-sm" style={{ background: 'linear-gradient(180deg, rgba(153,113,21,0.14), rgba(255,255,255,0.82))' }}>
               <img
-                src="/images/person/38person.jpg"
+                src="/images/person/felecia3.jpeg"
                 alt="Coaching with Felecia"
                 className="img-fluid w-100 object-fit-cover"
               />

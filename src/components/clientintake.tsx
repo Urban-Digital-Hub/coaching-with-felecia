@@ -20,7 +20,7 @@ export default function ClientIntakeForm() {
         {/* HEADER */}
         <div className="text-center mb-5">
           <h1 className="fw-bold mb-3" style={{ color: COLOR.secondary }}>
-            Client Intake Form
+          Client Intake Form
           </h1>
           <p className="text-muted fs-5">
             Take your time. This space is designed to understand your story with care, depth, and intention.

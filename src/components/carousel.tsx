@@ -1,6 +1,7 @@
 import COLOR from '../../constants/color'
 import { useEffect } from 'react'
 import Swal from 'sweetalert2'
+import { Link } from 'react-router-dom'
 const slides = [
   {
     title: 'Where your healing, your story, and your next chapter begin.',
@@ -99,12 +100,35 @@ function Carousel() {
                     {slide.description}
                   </p>
                   <div className="d-flex gap-3 flex-column flex-sm-row">
-                    <a className="btn btn-light btn-lg shadow-sm w-100 w-sm-auto" href={slide.ctaPrimaryHref || '#'} style={{ color: COLOR.primary }}>
-                      {slide.ctaPrimary}
-                    </a>
-                    <a className="btn btn-outline-light btn-lg w-100 w-sm-auto" href={slide.ctaSecondaryHref || '#'}>
-                      {slide.ctaSecondary}
-                    </a>
+                    {(() => {
+                      const href = slide.ctaPrimaryHref || '#';
+                      const isExternal = href.startsWith('http') || href.startsWith('mailto:') || href.startsWith('tel:');
+                      const className = "btn btn-light btn-lg shadow-sm w-100 w-sm-auto";
+                      const style = { color: COLOR.primary };
+                      return isExternal || href === '#' ? (
+                        <a className={className} href={href} style={style} {...(isExternal ? { target: "_blank", rel: "noopener noreferrer" } : {})}>
+                          {slide.ctaPrimary}
+                        </a>
+                      ) : (
+                        <Link className={className} to={href} style={style}>
+                          {slide.ctaPrimary}
+                        </Link>
+                      );
+                    })()}
+                    {(() => {
+                      const href = slide.ctaSecondaryHref || '#';
+                      const isExternal = href.startsWith('http') || href.startsWith('mailto:') || href.startsWith('tel:');
+                      const className = "btn btn-outline-light btn-lg w-100 w-sm-auto";
+                      return isExternal || href === '#' ? (
+                        <a className={className} href={href} {...(isExternal ? { target: "_blank", rel: "noopener noreferrer" } : {})}>
+                          {slide.ctaSecondary}
+                        </a>
+                      ) : (
+                        <Link className={className} to={href}>
+                          {slide.ctaSecondary}
+                        </Link>
+                      );
+                    })()}
                   </div>
                 </div>
               </div>

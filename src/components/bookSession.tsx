@@ -11,7 +11,7 @@ function BookSession() {
 
     window.open(
     //   'https://calendar.app.google/D3Qd7kxgAXbesDXW9',
-          import.meta.env.VITE_BOOKING_URL || 'https://calendar.app.google/D3Qd7kxgAXbesDXW9',
+          import.meta.env.VITE_BOOKING_URL || 'https://calendly.com/hammondf17',
       '_blank'
     )
   }

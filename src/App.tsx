@@ -17,6 +17,7 @@ import FitnessandLifestyle from "./components/fitnessandlifestyle"
 import Term from "./components/term"
 import ClientIntakeModule from "./components/clientintake"
 import SEO from "./components/SEO"
+import Book from "./components/book"
 
 declare global {
   interface Window {
@@ -117,6 +118,7 @@ function App() {
               <BookSession />
               <Testimonial />
               <Blog />
+              <Book />
               <Coaching />
               <FitnessandLifestyle />
               <Contact />

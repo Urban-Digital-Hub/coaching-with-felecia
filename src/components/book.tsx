@@ -84,9 +84,7 @@ function Book() {
                 lineHeight: "1.8",
               }}
             >
-              An inspiring journey of purpose, leadership, resilience, and
-              self-discovery. This book offers valuable lessons that will
-              encourage readers to reflect, grow, and lead with authenticity.
+              A raw, faith-driven memoir about letting go of one dream to discover a greater calling. From military aspirations to surrendering leadership to God, this book shows how a "tactical pause" can become your most powerful move. Learn to quiet the noise, renew your mindset, and lead your soul well. For anyone wrestling with purpose, pressure, or pivots.
             </p>
 
             <div className="my-4">

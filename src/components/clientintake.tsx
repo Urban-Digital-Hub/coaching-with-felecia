@@ -10,7 +10,7 @@ export default function ClientIntakeForm() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log(form);
-    alert("Submitted successfully ✨");
+    alert("Submitted successfully");
   };
 
   return (

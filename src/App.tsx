@@ -119,7 +119,7 @@ function App() {
               <Testimonial />
               <Blog />
               <Book />
-              <Coaching />
+              {/* <Coaching /> */}
               <FitnessandLifestyle />
               <Contact />
             </>

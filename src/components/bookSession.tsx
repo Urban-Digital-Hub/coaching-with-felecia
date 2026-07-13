@@ -14,7 +14,7 @@ function BookSession() {
           import.meta.env.VITE_BOOKING_URL || 'https://calendly.com/hammondf17',
       '_blank'
     )
-  }c
+  }
 
   return (
     <section

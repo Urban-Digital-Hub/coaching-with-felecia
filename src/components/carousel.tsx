@@ -1,6 +1,6 @@
 import COLOR from '../../constants/color'
 import { useEffect } from 'react'
-import Swal from 'sweetalert2'
+// import Swal from 'sweetalert2'
 import { Link } from 'react-router-dom'
 const slides = [
   {

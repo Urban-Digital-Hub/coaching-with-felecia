@@ -18,6 +18,8 @@ import Term from "./components/term"
 import ClientIntakeModule from "./components/clientintake"
 import SEO from "./components/SEO"
 import Book from "./components/book"
+import ArticleOne from "./components/article/articleone"
+import ArticleTwo from "./components/article/articletwo"
 
 declare global {
   interface Window {
@@ -180,6 +182,14 @@ function App() {
               <Contact />
             </>
           } 
+        />
+        <Route
+        path="/article-one"
+        element={<ArticleOne />}
+        />
+        <Route
+        path="/article-two"
+        element={<ArticleTwo />}
         />
         <Route 
           path="*" 

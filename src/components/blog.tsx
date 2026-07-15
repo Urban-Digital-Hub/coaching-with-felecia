@@ -1,5 +1,6 @@
 import COLOR from '../../constants/color'
 import { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 interface BlogPost {
   id: number
@@ -10,6 +11,7 @@ interface BlogPost {
   content: string
   author: string
   readTime: string
+  readMoreLink?: string
 }
 
 interface YouTubeResource {
@@ -24,23 +26,25 @@ interface YouTubeResource {
 const blogPosts: BlogPost[] = [
   {
     id: 1,
-    title: 'The Power of Mindful Living: Transform Your Daily Routine',
-    date: 'May 15, 2024',
+    title: 'Are You Living From Your Wounds or Your Wisdom?',
+    date: 'July 15, 2026',
     category: 'Wellness',
-    author: 'Felecia Coach',
+    author: 'Felecia Hammond',
     readTime: '6 min read',
-    excerpt: 'Discover how integrating mindfulness into your daily routine can lead to lasting wellness benefits and improved mental clarity.',
-    content: 'Mindfulness is more than just meditation. It\'s about being fully present in every moment. Learn practical techniques you can implement today...',
+    excerpt: 'Discover how past experiences shape your present and learn strategies to transform pain into personal growth.',
+    content: 'Many of us carry the weight of our past wounds, allowing them to dictate our present actions and decisions. In this article, we explore the difference between living from your wounds versus your wisdom. We will discuss practical steps to recognize these patterns and how to shift towards a more empowered and fulfilling life.',
+    readMoreLink: '/article-one',
   },
   {
     id: 2,
-    title: 'Building Confidence: A Step-by-Step Guide',
-    date: 'May 10, 2024',
+    title: 'Healing the Past Without Living in It',
+    date: 'July 80, 2026',
     category: 'Personal Growth',
-    author: 'Felecia Coach',
+    author: 'Felecia Hammond',
     readTime: '5 min read',
-    excerpt: 'Confidence is built, not born. Explore evidence-based strategies to strengthen your self-belief and unlock your potential.',
+    excerpt: 'Learn how to acknowledge past traumas while embracing the present and future. This guide offers actionable steps for emotional healing.',
     content: 'Confidence comes from self-awareness and consistent action. In this guide, we\'ll walk through proven methods...',
+    readMoreLink: '/article-two',
   },
   {
     id: 3,
@@ -82,6 +86,7 @@ const blogPosts: BlogPost[] = [
     excerpt: 'Self-doubt can hold you back. Learn powerful techniques to silence the inner critic and embrace your capabilities.',
     content: 'Self-doubt is a common barrier. We\'ll explore cognitive reframing and other powerful tools...',
   },
+  
 ]
 
 const youtubeResources: YouTubeResource[] = [
@@ -164,6 +169,8 @@ function Blog() {
     })
   }, [])
 
+  const navigate = useNavigate()
+
   // Merge fetched titles with existing titles
   const videosWithTitles = youtubeResources.map((video) => ({
     ...video,
@@ -205,7 +212,7 @@ function Blog() {
                   
                   <div className="d-flex justify-content-between align-items-center pt-3" style={{ borderTop: `1px solid ${COLOR.primary}20` }}>
                     <small className="text-muted">By {post.author}</small>
-                    <button className="btn btn-sm px-3" style={{ backgroundColor: COLOR.primary, color: '#fff' }}>
+                    <button className="btn btn-sm px-3" style={{ backgroundColor: COLOR.primary, color: '#fff' }} onClick={() => navigate(post.readMoreLink || '#')}>
                       Read More →
                     </button>
                   </div>

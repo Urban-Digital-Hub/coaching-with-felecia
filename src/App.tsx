@@ -20,7 +20,7 @@ import SEO from "./components/SEO"
 import Book from "./components/book"
 import ArticleOne from "./components/article/articleone"
 import ArticleTwo from "./components/article/articletwo"
-
+import Cert from "./components/cert"
 declare global {
   interface Window {
     Tawk_API?: Record<string, unknown>
@@ -116,6 +116,7 @@ function App() {
               />
               <Carousel />
               <About />
+              <Cert />
               <Services />
               <BookSession />
               <Testimonial />

@@ -17,7 +17,7 @@ const certifications: Certification[] = [
   {
     id: 1,
     title: "Military Training Certificate",
-    issuer: "U.S Army",
+    issuer: "U.S. Army",
     image: cert1,
   },
   {

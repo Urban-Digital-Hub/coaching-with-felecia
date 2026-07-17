@@ -6,7 +6,14 @@ import cert1 from "/images/cert/army.jpeg";
 import cert2 from "/images/cert/pc.jpeg";
 import cert3 from "/images/cert/pc2.jpeg";
 
-const certifications = [
+interface Certification {
+  id: number;
+  title: string;
+  issuer: string;
+  image: string;
+}
+
+const certifications: Certification[] = [
   {
     id: 1,
     title: "Military Training Certificate",
@@ -28,10 +35,10 @@ const certifications = [
 ];
 
 function Cert() {
-  const [selectedCert, setSelectedCert] = useState(null);
+  const [selectedCert, setSelectedCert] = useState<Certification | null>(null);
 
   return (
-    <section className="py-5" style={{ background: "#f8fafc" }}>
+     <section className="py-5" style={{ background: "#f8fafc" }}>
       <div className="container">
         <h2
           className="text-center fw-bold mb-3"
@@ -101,7 +108,7 @@ function Cert() {
               display: "block",
               backgroundColor: "rgba(0,0,0,0.7)",
             }}
-            tabIndex="-1"
+            tabIndex={-1}
             onClick={() => setSelectedCert(null)}
           >
             <div

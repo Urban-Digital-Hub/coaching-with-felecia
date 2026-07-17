@@ -5,7 +5,8 @@ import COLOR from "../../constants/color";
 import cert1 from "/images/cert/army.jpeg";
 import cert2 from "/images/cert/pc.jpeg";
 import cert3 from "/images/cert/pc2.jpeg";
-
+import cert4 from "/images/cert/cert4.png"
+import cert5 from "/images/cert/cert5.png"
 interface Certification {
   id: number;
   title: string;
@@ -32,6 +33,20 @@ const certifications: Certification[] = [
     issuer: "Transformation Academy",
     image: cert3,
   },
+
+  {
+    id: 4,
+    title: "Sexual Assault Advocate Certification Program",
+    issuer: "Department Of Defense",
+    image: cert4
+  },
+
+  {
+    id: 5,
+    title: "Bsc in Finance",
+    issuer: "Rasmussen University ",
+    image: cert5
+  }
 ];
 
 function Cert() {

@@ -21,32 +21,32 @@ const certifications: Certification[] = [
     issuer: "U.S. Army",
     image: cert1,
   },
-  {
-    id: 2,
-    title: "Professional Life Coach",
-    issuer: "Transformation Academy",
-    image: cert2,
-  },
-  {
-    id: 3,
-    title: "Goal Success Life Coach",
-    issuer: "Transformation Academy",
-    image: cert3,
-  },
+  // {
+  //   id: 2,
+  //   title: "Professional Life Coach",
+  //   issuer: "Transformation Academy",
+  //   image: cert2,
+  // },
+  // {
+  //   id: 3,
+  //   title: "Goal Success Life Coach",
+  //   issuer: "Transformation Academy",
+  //   image: cert3,
+  // },
 
-  {
-    id: 4,
-    title: "Sexual Assault Advocate Certification Program",
-    issuer: "Department Of Defense",
-    image: cert4
-  },
+  // {
+  //   id: 4,
+  //   title: "Sexual Assault Advocate Certification Program",
+  //   issuer: "Department Of Defense",
+  //   image: cert4
+  // },
 
-  {
-    id: 5,
-    title: "Bsc in Finance",
-    issuer: "Rasmussen University ",
-    image: cert5
-  }
+  // {
+  //   id: 5,
+  //   title: "Bsc in Finance",
+  //   issuer: "Rasmussen University ",
+  //   image: cert5
+  // }
 ];
 
 function Cert() {

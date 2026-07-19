@@ -3,10 +3,10 @@ import COLOR from "../../constants/color";
 
 // Import your certificate images
 import cert1 from "/images/cert/army.jpeg";
-import cert2 from "/images/cert/pc.jpeg";
-import cert3 from "/images/cert/pc2.jpeg";
-import cert4 from "/images/cert/cert4.png"
-import cert5 from "/images/cert/cert5.png"
+// import cert2 from "/images/cert/pc.jpeg";
+// import cert3 from "/images/cert/pc2.jpeg";
+// import cert4 from "/images/cert/cert4.png"
+// import cert5 from "/images/cert/cert5.png"
 interface Certification {
   id: number;
   title: string;

@@ -1,17 +1,16 @@
 import { useState } from "react";
+import { FaAward } from "react-icons/fa";
 import COLOR from "../../constants/color";
 
 // Import your certificate images
 import cert1 from "/images/cert/army.jpeg";
-// import cert2 from "/images/cert/pc.jpeg";
-// import cert3 from "/images/cert/pc2.jpeg";
-// import cert4 from "/images/cert/cert4.png"
-// import cert5 from "/images/cert/cert5.png"
+
 interface Certification {
   id: number;
   title: string;
   issuer: string;
-  image: string;
+  image?: string;
+  date?: string;
 }
 
 const certifications: Certification[] = [
@@ -21,39 +20,54 @@ const certifications: Certification[] = [
     issuer: "U.S. Army",
     image: cert1,
   },
-  // {
-  //   id: 2,
-  //   title: "Professional Life Coach",
-  //   issuer: "Transformation Academy",
-  //   image: cert2,
-  // },
-  // {
-  //   id: 3,
-  //   title: "Goal Success Life Coach",
-  //   issuer: "Transformation Academy",
-  //   image: cert3,
-  // },
-
-  // {
-  //   id: 4,
-  //   title: "Sexual Assault Advocate Certification Program",
-  //   issuer: "Department Of Defense",
-  //   image: cert4
-  // },
-
-  // {
-  //   id: 5,
-  //   title: "Bsc in Finance",
-  //   issuer: "Rasmussen University ",
-  //   image: cert5
-  // }
+  {
+    id: 2,
+    title: "Certified Happiness Life Coach",
+    issuer: "Transformation Academy",
+    date: "July 17, 2026",
+  },
+  {
+    id: 3,
+    title: "Bachelor of Science in Finance",
+    issuer: "Rasmussen University",
+    date: "December 14, 2024",
+  },
+  {
+    id: 4,
+    title: "Sexual Assault Advocate Certification Program",
+    issuer: "Department of Defense",
+    date: "August 31, 2023",
+  },
+  {
+    id: 5,
+    title: "Professional Life Coach Certification",
+    issuer: "Transformation Academy",
+    date: "April 9, 2026",
+  },
+  {
+    id: 6,
+    title: "Life Purpose Coach Certification",
+    issuer: "Transformation Academy",
+    date: "April 9, 2026",
+  },
+  {
+    id: 7,
+    title: "Goal Success Life Coach Certification",
+    issuer: "Transformation Academy",
+    date: "April 9, 2026",
+  },
 ];
 
 function Cert() {
   const [selectedCert, setSelectedCert] = useState<Certification | null>(null);
 
   return (
-     <section className="py-5" style={{ background: "#f8fafc" }}>
+    <section
+      className="py-5"
+      style={{
+        background: "#f8fafc",
+      }}
+    >
       <div className="container">
         <h2
           className="text-center fw-bold mb-3"
@@ -64,46 +78,112 @@ function Cert() {
 
         <p
           className="text-center mx-auto mb-5"
-          style={{ maxWidth: "650px", color: COLOR.secondary }}
+          style={{
+            maxWidth: "650px",
+            color: COLOR.secondary,
+          }}
         >
-          A collection of certifications showcasing my continuous learning and
-          professional achievements.
+          A collection of certifications showcasing my continuous learning,
+          professional achievements, and dedication to lifelong growth.
         </p>
 
         <div className="row g-4">
           {certifications.map((cert) => (
-            <div className="col-md-6" key={cert.id}>
+            <div className="col-lg-4 col-md-6" key={cert.id}>
               <div
-                className="card border-0 shadow h-100"
-                style={{ borderRadius: "20px" }}
+                className="card border-0 shadow-sm h-100"
+                style={{
+                  borderRadius: "20px",
+                  overflow: "hidden",
+                  transition: "0.35s ease",
+                }}
               >
-                <img
-                  src={cert.image}
-                  alt={cert.title}
-                  className="card-img-top"
+                {/* IMAGE OR PLACEHOLDER */}
+                <div
                   style={{
-                    height: "320px",
-                    objectFit: "cover",
+                    height: "280px",
+                    overflow: "hidden",
                   }}
-                />
+                >
+                  {cert.image ? (
+                    <img
+                      src={cert.image}
+                      alt={cert.title}
+                      className="w-100 h-100"
+                      style={{
+                        objectFit: "cover",
+                      }}
+                    />
+                  ) : (
+                    <div
+                      className="d-flex flex-column justify-content-center align-items-center text-center h-100 p-4"
+                      style={{
+                        background: `linear-gradient(135deg, ${COLOR.secondary}, ${COLOR.primary})`,
+                        color: "#fff",
+                      }}
+                    >
+                      <div
+                        className="d-flex justify-content-center align-items-center mb-4"
+                        style={{
+                          width: 90,
+                          height: 90,
+                          borderRadius: "50%",
+                          background: "rgba(255,255,255,.15)",
+                          backdropFilter: "blur(12px)",
+                          border: "1px solid rgba(255,255,255,.25)",
+                        }}
+                      >
+                        <FaAward size={42} />
+                      </div>
 
-                <div className="card-body">
-                  <h4
+                      <h5 className="fw-bold">{cert.title}</h5>
+
+                      <p className="mb-2 opacity-75">{cert.issuer}</p>
+
+                      {cert.date && (
+                        <small className="opacity-75">{cert.date}</small>
+                      )}
+
+                      {/* <span
+                        className="mt-4 px-3 py-2 rounded-pill"
+                        style={{
+                          background: "rgba(255,255,255,.15)",
+                          border: "1px solid rgba(255,255,255,.2)",
+                        }}
+                      >
+                        Certificate Preview
+                      </span> */}
+                    </div>
+                  )}
+                </div>
+
+                {/* CARD BODY */}
+                <div className="card-body d-flex flex-column">
+                  <h5
                     className="fw-bold"
-                    style={{ color: COLOR.secondary }}
+                    style={{
+                      color: COLOR.secondary,
+                    }}
                   >
                     {cert.title}
-                  </h4>
+                  </h5>
 
-                  <p className="text-muted">
-                    Issued by <strong>{cert.issuer}</strong>
+                  <p className="text-muted mb-1">
+                    <strong>{cert.issuer}</strong>
                   </p>
 
+                  {cert.date && (
+                    <small className="text-secondary mb-3">
+                      Issued {cert.date}
+                    </small>
+                  )}
+
                   <button
-                    className="btn mt-2"
+                    className="btn mt-auto"
                     style={{
-                      backgroundColor: COLOR.primary,
-                      color: COLOR.white,
+                      background: COLOR.primary,
+                      color: "#fff",
+                      borderRadius: "10px",
                     }}
                     onClick={() => setSelectedCert(cert)}
                   >
@@ -115,13 +195,13 @@ function Cert() {
           ))}
         </div>
 
-        {/* Bootstrap Modal */}
+        {/* MODAL */}
         {selectedCert && (
           <div
             className="modal fade show"
             style={{
               display: "block",
-              backgroundColor: "rgba(0,0,0,0.7)",
+              background: "rgba(0,0,0,.75)",
             }}
             tabIndex={-1}
             onClick={() => setSelectedCert(null)}
@@ -130,28 +210,83 @@ function Cert() {
               className="modal-dialog modal-xl modal-dialog-centered"
               onClick={(e) => e.stopPropagation()}
             >
-              <div className="modal-content">
+              <div
+                className="modal-content border-0"
+                style={{
+                  borderRadius: "20px",
+                }}
+              >
                 <div className="modal-header">
-                  <h5
-                    className="modal-title"
-                    style={{ color: COLOR.secondary }}
+                  <h4
+                    className="fw-bold"
+                    style={{
+                      color: COLOR.secondary,
+                    }}
                   >
                     {selectedCert.title}
-                  </h5>
+                  </h4>
 
                   <button
-                    type="button"
                     className="btn-close"
                     onClick={() => setSelectedCert(null)}
-                  ></button>
+                  />
                 </div>
 
                 <div className="modal-body text-center">
-                  <img
-                    src={selectedCert.image}
-                    alt={selectedCert.title}
-                    className="img-fluid rounded"
-                  />
+                  {selectedCert.image ? (
+                    <img
+                      src={selectedCert.image}
+                      alt={selectedCert.title}
+                      className="img-fluid rounded shadow"
+                    />
+                  ) : (
+                    <div
+                      className="d-flex flex-column justify-content-center align-items-center"
+                      style={{
+                        minHeight: "500px",
+                        borderRadius: "20px",
+                        background: `linear-gradient(135deg, ${COLOR.secondary}, ${COLOR.primary})`,
+                        color: "#fff",
+                      }}
+                    >
+                      <div
+                        className="d-flex justify-content-center align-items-center"
+                        style={{
+                          width: 120,
+                          height: 120,
+                          borderRadius: "50%",
+                          background: "rgba(255,255,255,.15)",
+                          border: "1px solid rgba(255,255,255,.2)",
+                        }}
+                      >
+                        <FaAward size={60} />
+                      </div>
+
+                      <h2 className="fw-bold mt-4">
+                        {selectedCert.title}
+                      </h2>
+
+                      <h5 className="opacity-75 mt-2">
+                        {selectedCert.issuer}
+                      </h5>
+
+                      {selectedCert.date && (
+                        <p className="mt-2 opacity-75">
+                          Issued {selectedCert.date}
+                        </p>
+                      )}
+
+                      {/* <div
+                        className="mt-4 px-4 py-2 rounded-pill"
+                        style={{
+                          background: "rgba(255,255,255,.15)",
+                          border: "1px solid rgba(255,255,255,.2)",
+                        }}
+                      >
+                        Certificate Image Coming Soon
+                      </div> */}
+                    </div>
+                  )}
                 </div>
               </div>
             </div>

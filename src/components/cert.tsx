@@ -56,6 +56,11 @@ const certifications: Certification[] = [
     issuer: "Transformation Academy",
     date: "April 9, 2026",
   },
+  {
+    id: 8,
+    title: "Certified Master Life Coach at Transformation Academy",
+    issuer: ""
+  }
 ];
 
 function Cert() {

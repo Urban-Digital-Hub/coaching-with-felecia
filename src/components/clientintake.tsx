@@ -1,17 +1,52 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import COLOR from "../../constants/color";
+import type { FormEvent } from 'react'
+import Swal from "sweetalert2";
+// import { useNavigate } from "react-router-dom";
 export default function ClientIntakeForm() {
   const [form, setForm] = useState<any>({});
+const handleChange = (e: any) => {
+  setForm({ ...form, [e.target.name]: e.target.value });
+};
 
-  const handleChange = (e: any) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
-  };
+const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
+  event.preventDefault();
+  const currentFormElement = event.currentTarget; // Save reference before async gap
+  const formData = new FormData(currentFormElement);
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log(form);
-    alert("Submitted successfully");
-  };
+  formData.append("access_key", "0e96f1ee-8a50-404c-baab-4973d5e0dbff");
+
+  const response = await fetch("https://api.web3forms.com/submit", {
+    method: "POST",
+    body: formData
+  });
+
+  const data = await response.json();
+  console.log("data", data);
+
+  if (data.success) {
+    Swal.fire({
+      icon: 'success',
+      title: 'Success',
+      text: 'Your message has been sent successfully!'
+    }); 
+    
+    // Fix 1: Reset the React state object
+    setForm({}); 
+    
+    // Fix 2: Use the saved reference to reset native input visuals
+    currentFormElement.reset(); 
+  } else {
+    console.log("Error", data);
+    Swal.fire({
+      icon: 'error',
+      title: 'Error',
+      text: 'Failed to send your message. Please try again.'
+    });
+  }
+};
+
+
 
   return (
     <div className="bg-light py-5">
@@ -31,6 +66,10 @@ export default function ClientIntakeForm() {
 
           {/* SECTION */}
           <Section title="Personal Information">
+            <div style={{ display: 'none'}}>
+              <Input  name="Client Intake Form" onChange={handleChange}  style={{ fontWeight: 'bold', fontSize: '24px' }} />
+            </div>
+
             <Row>
               <Input label="Full Name" name="fullName" onChange={handleChange}  required/>
               <Input label="Email Address" name="email" onChange={handleChange} />

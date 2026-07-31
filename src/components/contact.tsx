@@ -1,14 +1,27 @@
-
 import COLOR from '../../constants/color'
 import Swal from 'sweetalert2';
 import { AiOutlineMail } from 'react-icons/ai'
 import { FiMapPin, FiPhone } from 'react-icons/fi'
-import type { FormEvent } from 'react'
+import { useState, type FormEvent } from 'react'
+
 function Contact() {
+  const [form, setForm] = useState<any>({
+    name: '',
+    email: '',
+    subject: '',
+    message: ''
+  })
+
+  const handleChange = (e: any) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
 
   const onSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    const formData = new FormData(event.currentTarget);
+    
+    // Save reference before the async network wait gap
+    const currentFormElement = event.currentTarget; 
+    const formData = new FormData(currentFormElement);
 
     formData.append("access_key", "0e96f1ee-8a50-404c-baab-4973d5e0dbff");
 
@@ -26,7 +39,12 @@ function Contact() {
         title: 'Success',
         text: 'Your message has been sent successfully!'
       }); 
-      event.currentTarget.reset();
+      
+      // Fix 1: Clear the React state object completely
+      setForm({ name: '', email: '', subject: '', message: '' });
+      
+      // Fix 2: Reset the physical native visual layout 
+      currentFormElement.reset();
     } else {
       console.log("Error", data);
       Swal.fire({
@@ -60,8 +78,8 @@ function Contact() {
                   </div>
                   <div>
                     <a href='mailto:mentoringandcoaching@yourwellnessmatters.net' style={{ textDecoration: 'none'}}>
-                    <h6 className="mb-1" style={{ color: COLOR.secondary }}>Email</h6>
-                    <p className="mb-0 text-muted" style={{ fontSize: '0.770rem' }}>mentoringandcoaching@yourwellnessmatters.net</p>
+                      <h6 className="mb-1" style={{ color: COLOR.secondary }}>Email</h6>
+                      <p className="mb-0 text-muted" style={{ fontSize: '0.770rem' }}>mentoringandcoaching@yourwellnessmatters.net</p>
                     </a>
                   </div>
                 </div>
@@ -86,8 +104,8 @@ function Contact() {
                   </div>
                   <div>
                     <a href='tel:+16086719776' style={{ textDecoration: 'none'}}>
-                    <h6 className="mb-1" style={{ color: COLOR.secondary }}>Phone</h6>
-                    <p className="mb-0 text-muted">+1 608 671 9776</p>
+                      <h6 className="mb-1" style={{ color: COLOR.secondary }}>Phone</h6>
+                      <p className="mb-0 text-muted">+1 608 671 9776</p>
                     </a>
                   </div>
                 </div>
@@ -103,6 +121,8 @@ function Contact() {
                   <label className="form-label text-muted">Name</label>
                   <input
                     name="name"
+                    value={form.name}
+                    onChange={handleChange}
                     required
                     type="text"
                     className="form-control rounded-4 border bg-light"
@@ -114,6 +134,8 @@ function Contact() {
                   <label className="form-label text-muted">Email</label>
                   <input
                     name="email"
+                    value={form.email}
+                    onChange={handleChange}
                     required
                     type="email"
                     className="form-control rounded-4 border bg-light"
@@ -125,6 +147,8 @@ function Contact() {
                   <label className="form-label text-muted">Subject</label>
                   <input
                     name="subject"
+                    value={form.subject}
+                    onChange={handleChange}
                     type="text"
                     className="form-control rounded-4 border bg-light"
                     placeholder="What can we help you with?"
@@ -135,6 +159,8 @@ function Contact() {
                   <label className="form-label text-muted">Message</label>
                   <textarea
                     name="message"
+                    value={form.message}
+                    onChange={handleChange}
                     required
                     className="form-control rounded-4 border bg-light"
                     rows={6}
@@ -148,7 +174,6 @@ function Contact() {
                   </button>
                 </div>
               </form>
-               {/* <span className='text-center'>{result}</span> */}
             </div>
           </div>
         </div>

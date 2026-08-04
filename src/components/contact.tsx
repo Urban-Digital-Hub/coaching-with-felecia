@@ -23,7 +23,7 @@ function Contact() {
     const currentFormElement = event.currentTarget; 
     const formData = new FormData(currentFormElement);
 
-    formData.append("access_key", "0e96f1ee-8a50-404c-baab-4973d5e0dbff");
+    formData.append("access_key", '0e96f1ee-8a50-404c-baab-4973d5e0dbff');
 
     const response = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
@@ -77,9 +77,9 @@ function Contact() {
                     <AiOutlineMail size={20} />
                   </div>
                   <div>
-                    <a href='mailto:mentoringandcoaching@yourwellnessmatters.net' style={{ textDecoration: 'none'}}>
+                    <a href='mailto:coachingnmentorshipwithfelecia@gmail.com' style={{ textDecoration: 'none'}}>
                       <h6 className="mb-1" style={{ color: COLOR.secondary }}>Email</h6>
-                      <p className="mb-0 text-muted" style={{ fontSize: '0.770rem' }}>mentoringandcoaching@yourwellnessmatters.net</p>
+                      <p className="mb-0 text-muted" style={{ fontSize: '0.770rem' }}>coachingnmentorshipwithfelecia@gmail.com</p>
                     </a>
                   </div>
                 </div>

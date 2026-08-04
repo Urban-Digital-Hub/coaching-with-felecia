@@ -12,7 +12,7 @@ function Footer() {
         event.preventDefault();
         const formData = new FormData(event.currentTarget);
     
-        formData.append("access_key", "0e96f1ee-8a50-404c-baab-4973d5e0dbff");
+        formData.append("access_key", '0e96f1ee-8a50-404c-baab-4973d5e0dbff');
     
         const response = await fetch("https://api.web3forms.com/submit", {
           method: "POST",
@@ -27,9 +27,8 @@ function Footer() {
             icon: 'success',
             title: 'Success',
             text: 'You have subscribed successfully!'
-          }).then(() => {
-            navigate('/'); // Redirect to home page after successful subscription
-          });
+          })
+          navigate('/')
         } else {
           console.log("Error", data);
           Swal.fire({

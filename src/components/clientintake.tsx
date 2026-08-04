@@ -13,8 +13,9 @@ const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
   event.preventDefault();
   const currentFormElement = event.currentTarget; // Save reference before async gap
   const formData = new FormData(currentFormElement);
-
-  formData.append("access_key", "0e96f1ee-8a50-404c-baab-4973d5e0dbff");
+  
+  formData.append("access_key", '0e96f1ee-8a50-404c-baab-4973d5e0dbff');
+  // console.log("Access Key:", formData.get("access_key")); 
 
   const response = await fetch("https://api.web3forms.com/submit", {
     method: "POST",

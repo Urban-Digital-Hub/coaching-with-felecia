@@ -15,7 +15,7 @@ function Services() {
                 My services are designed for clarity, comfort, and premium results. Each offering blends modern strategy, thoughtful design, and personal attention.
               </p>
               <div className="row g-3">
-                <div className="col-sm-6">
+                <div className="col-sm-6" data-aos="fade-left" data-aos-delay="100" data-aos-duration="800" data-aos-easing="ease-out" data-aos-once="false">
                   <div className="p-4 rounded-4 h-100" style={{ backgroundColor: '#f9f7f1', border: `1px solid ${COLOR.primary}20` }}>
                     <div className="mb-3 d-flex align-items-center justify-content-center rounded-circle" style={{ width: '44px', height: '44px', backgroundColor: COLOR.primary, color: '#fff' }}>
                       01
@@ -24,7 +24,7 @@ function Services() {
                     <p className="mb-0 text-muted">Custom strategies rooted in balance, confidence, and long-term growth.</p>
                   </div>
                 </div>
-                <div className="col-sm-6">
+                <div className="col-sm-6" data-aos="fade-up" data-aos-delay="200" data-aos-duration="800" data-aos-easing="ease-out" data-aos-once="false">
                   <div className="p-4 rounded-4 h-100" style={{ backgroundColor: '#f9f7f1', border: `1px solid ${COLOR.primary}20` }}>
                     <div className="mb-3 d-flex align-items-center justify-content-center rounded-circle" style={{ width: '44px', height: '44px', backgroundColor: COLOR.primary, color: '#fff' }}>
                       02
@@ -33,7 +33,7 @@ function Services() {
                     <p className="mb-0 text-muted">Dedicated guidance from experienced professionals who understand your goals.</p>
                   </div>
                 </div>
-                <div className="col-sm-6">
+                <div className="col-sm-6" data-aos="fade-up" data-aos-delay="300" data-aos-duration="800" data-aos-easing="ease-out" data-aos-once="false">
                   <div className="p-4 rounded-4 h-100" style={{ backgroundColor: '#f9f7f1', border: `1px solid ${COLOR.primary}20` }}>
                     <div className="mb-3 d-flex align-items-center justify-content-center rounded-circle" style={{ width: '44px', height: '44px', backgroundColor: COLOR.primary, color: '#fff' }}>
                       03
@@ -42,7 +42,7 @@ function Services() {
                     <p className="mb-0 text-muted">Adaptable experiences built to fit your schedule and lifestyle.</p>
                   </div>
                 </div>
-                <div className="col-sm-6">
+                <div className="col-sm-6" data-aos="fade-right" data-aos-delay="400" data-aos-duration="800" data-aos-easing="ease-out" data-aos-once="false">
                   <div className="p-4 rounded-4 h-100" style={{ backgroundColor: '#f9f7f1', border: `1px solid ${COLOR.primary}20` }}>
                     <div className="mb-3 d-flex align-items-center justify-content-center rounded-circle" style={{ width: '44px', height: '44px', backgroundColor: COLOR.primary, color: '#fff' }}>
                       04
@@ -66,7 +66,7 @@ function Services() {
           </div>
         </div>
 
-        <div className="row g-4 mt-5">
+        <div className="row g-4 mt-5" data-aos="fade-up" data-aos-delay="100" data-aos-duration="800" data-aos-easing="ease-out" data-aos-once="false">
           <div className="col-12 col-lg-4">
             <div className="p-4 rounded-4 h-100" style={{ backgroundColor: '#ffffff', border: `1px solid ${COLOR.primary}20` }}>
               <h5 style={{ color: COLOR.secondary }}>Consultation</h5>
@@ -87,7 +87,7 @@ function Services() {
           </div>
         </div>
 
-        <div className="rounded-4 mt-5 p-5 text-center" style={{ backgroundColor: COLOR.secondary, color: '#fff' }}>
+        <div className="rounded-4 mt-5 p-5 text-center" style={{ backgroundColor: COLOR.secondary, color: '#fff' }} data-aos="fade-up" data-aos-delay="100" data-aos-duration="800" data-aos-easing="ease-out" data-aos-once="false">
           <h2 className="fw-bold mb-3">A services experience built around you.</h2>
           <p className="mb-4 text-white-75">From one-on-one guidance to premium digital support, our services bring calm, clarity, and confidence to every part of your journey.</p>
           <a className="btn btn-outline-light btn-lg" href="https://calendly.com/hammondf17" target='blank'  rel="noreferrer" style={{ borderColor: '#fff' }}>

@@ -21,6 +21,7 @@ import Book from "./components/book"
 import ArticleOne from "./components/article/articleone"
 import ArticleTwo from "./components/article/articletwo"
 import Cert from "./components/cert"
+import GlowCursor from "./components/glowcursor"
 declare global {
   interface Window {
     Tawk_API?: Record<string, unknown>
@@ -100,6 +101,7 @@ function App() {
   return (
     <>
       {!isFormMessagePage && <Header />}
+      <GlowCursor />
 
       <Routes>
         {/* Home route composes the main landing sections */}

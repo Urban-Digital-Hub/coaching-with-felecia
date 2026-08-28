@@ -1,0 +1,30 @@
+.glow-cursor {
+  position: fixed;
+
+  width: 24px;
+  height: 24px;
+
+  border-radius: 50%;
+
+  pointer-events: none;
+  z-index: 99999;
+
+  transform: translate(-50%, -50%);
+
+  /* Gold border only */
+  border: 2px solid #997315;
+
+  /* No fill */
+  background: transparent;
+
+  transition:
+    left 0.08s ease-out,
+    top 0.08s ease-out;
+}
+
+@media (max-width: 768px) {
+  .glow-cursor {
+    display: none;
+  }
+}
+

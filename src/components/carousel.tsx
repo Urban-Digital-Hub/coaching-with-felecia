@@ -79,7 +79,7 @@ function Carousel() {
               }}
             >
               <div className="carousel-caption d-flex flex-column justify-content-center align-items-start h-100 text-start p-4 p-md-5">
-                <div className="w-100" style={{ maxWidth: '620px' }}>
+                <div className="w-100" style={{ maxWidth: '620px' }} data-aos="fade-right" data-aos-delay="100" data-aos-duration="800" data-aos-easing="ease-out" data-aos-once="false">
                   <h1 className="display-5 fw-bold" style={{ color: COLOR.primary, fontWeight: 'bold', textShadow: '0 4px 6px rgba(0, 0, 0, 0.1)' }}>
                     {slide.title}
                   </h1>

@@ -92,7 +92,7 @@ function Cert() {
           professional achievements, and dedication to lifelong growth.
         </p>
 
-        <div className="row g-4">
+        <div className="row g-4" data-aos="fade-right" data-aos-delay="100" data-aos-duration="800" data-aos-easing="ease-out" data-aos-once="false">
           {certifications.map((cert) => (
             <div className="col-lg-4 col-md-6" key={cert.id}>
               <div

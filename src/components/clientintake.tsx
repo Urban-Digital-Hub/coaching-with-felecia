@@ -102,7 +102,7 @@ export default function ClientIntakeForm() {
   const progressPercent = ((activeIndex + 1) / SECTIONS.length) * 100;
 
   return (
-    <div className="intake-root">
+    <div className="intake-root" data-aos="fade-up" data-aos-delay="100" data-aos-duration="800" data-aos-easing="ease-out" data-aos-once="false">
       <style>{CSS}</style>
 
       <div className="intake-shell">

@@ -1,5 +1,5 @@
 import COLOR from "../../constants/color";
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
 
 function About() {
   return (
@@ -9,7 +9,7 @@ function About() {
     >
       <div className="container">
         <div className="row align-items-center g-5">
-          <div className="col-12 col-lg-6">
+          <div className="col-12 col-lg-6" data-aos="fade-up" data-aos-delay="100" data-aos-duration="800" data-aos-easing="ease-out" data-aos-once="false">
             <div
               className="px-4 py-5 rounded-4 shadow-sm"
               style={{ backgroundColor: "rgba(255, 255, 255, 0.96)" }}
@@ -31,31 +31,33 @@ function About() {
                 military and federal agencies. Her career—marked by leadership,
                 integrity, and the quiet endurance required of women in
                 uniform—shaped her understanding of resilience, emotional
-                suppression, and the cost of carrying invisible wounds.<br></br> <br></br> For
-                years, Felecia became who she needed to be to survive. It wasn’t
-                until she transitioned out of the Army that she realized the
-                battlefield had followed her home. Determined to understand the
-                patterns shaping her relationships, her nervous system, and her
-                sense of self, she embarked on a transformative journey of
-                emotional healing and spiritual awakening. That journey became
-                the foundation of her debut memoir, The Tactical Pause—a
-                cinematic, deeply personal exploration of identity, trauma, and
-                the courage it takes to reclaim the woman buried beneath
-                survival mode.<br></br> <br></br> Her life has been shaped by transitions: from
+                suppression, and the cost of carrying invisible wounds.<br></br>{" "}
+                <br></br> For years, Felecia became who she needed to be to
+                survive. It wasn’t until she transitioned out of the Army that
+                she realized the battlefield had followed her home. Determined
+                to understand the patterns shaping her relationships, her
+                nervous system, and her sense of self, she embarked on a
+                transformative journey of emotional healing and spiritual
+                awakening. That journey became the foundation of her debut
+                memoir, The Tactical Pause—a cinematic, deeply personal
+                exploration of identity, trauma, and the courage it takes to
+                reclaim the woman buried beneath survival mode.<br></br>{" "}
+                <br></br> Her life has been shaped by transitions: from
                 childhood into the military, from soldier into mother, from
                 high‑functioning survival into embodied healing. Writing became
                 her way of piecing herself back together, naming the truths she
                 once tucked away, and reclaiming the parts of herself she
-                thought she had lost.<br></br> <br></br> Today, Felecia is a wellness content
-                creator and the founder of Your Wellness Matters, a coaching and
-                mentorship practice dedicated to helping women unlearn survival
-                mode, reclaim their softness, and rebuild lives rooted in
-                emotional truth. Her work centers on emotional intelligence,
-                trauma recovery, nervous‑system awareness, self‑leadership, and
-                faith‑rooted healing. Through her YouTube channel, writing, and
-                coaching, she creates practical, compassionate content that
-                guides women through burnout, boundaries, identity restoration,
-                and the long road back to themselves.<br></br> <br></br> At her core, Felecia is a
+                thought she had lost.<br></br> <br></br> Today, Felecia is a
+                wellness content creator and the founder of Your Wellness
+                Matters, a coaching and mentorship practice dedicated to helping
+                women unlearn survival mode, reclaim their softness, and rebuild
+                lives rooted in emotional truth. Her work centers on emotional
+                intelligence, trauma recovery, nervous‑system awareness,
+                self‑leadership, and faith‑rooted healing. Through her YouTube
+                channel, writing, and coaching, she creates practical,
+                compassionate content that guides women through burnout,
+                boundaries, identity restoration, and the long road back to
+                themselves.<br></br> <br></br> At her core, Felecia is a
                 storyteller—someone who believes that when we tell the truth
                 about our lives, we give other women permission to tell the
                 truth about theirs. She holds an Associate of Arts in General
@@ -135,7 +137,7 @@ function About() {
             </div>
           </div>
 
-          <div className="col-12 col-lg-6">
+          <div className="col-12 col-lg-6" data-aos="fade-left" data-aos-delay="200" data-aos-duration="800" data-aos-easing="ease-out" data-aos-once="false">
             <div
               className="rounded-4 overflow-hidden shadow-sm"
               style={{

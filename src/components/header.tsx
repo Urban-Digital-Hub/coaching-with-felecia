@@ -132,7 +132,7 @@ export default function Header() {
                   </Link>
                 </li>
                 <li>
-                  <Link className="dropdown-item" to="/mentoring-business">
+                  <Link className="dropdown-item" to="/mentorship-and-business">
                     Menstorship & Business
                   </Link>
                 </li>

@@ -26,16 +26,16 @@ function Testimonial() {
     <section className="py-5" style={{ backgroundColor: '#f7f4ed', color: COLOR.secondary }}>
       <div className="container">
         <div className="text-center mb-5">
-          <p className="text-uppercase fw-bold mb-2" style={{ letterSpacing: '0.24em', color: COLOR.primary }}>
+          <p className="text-uppercase fw-bold mb-2" style={{ letterSpacing: '0.24em', color: COLOR.primary }} data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-once="false">
             Testimonials
           </p>
           <h2 className="display-6 fw-bold">What our clients say about us</h2>
-          <p className="text-muted mx-auto" style={{ maxWidth: '620px' }}>
+          <p className="text-muted mx-auto" style={{ maxWidth: '620px' }} data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-once="false">
             Elegant and thoughtful service delivered in a premium, calming way. Hear from people who trust our process.
           </p>
         </div>
 
-        <div className="row g-4">
+        <div className="row g-4" data-aos="fade-left" data-aos-delay="100" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-once="false">
           {feedback.map((item, index) => (
             <div key={index} className="col-md-6 col-lg-4">
               <div className="h-100 p-4 rounded-4" style={{ backgroundColor: '#ffffff', boxShadow: '0 24px 60px rgba(11, 33, 70, 0.08)' }}>

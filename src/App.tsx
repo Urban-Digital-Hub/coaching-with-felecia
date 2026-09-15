@@ -22,6 +22,8 @@ import ArticleOne from "./components/article/articleone"
 import ArticleTwo from "./components/article/articletwo"
 import Cert from "./components/cert"
 import GlowCursor from "./components/glowcursor"
+import MentorshipandBusiness from "./components/mentorshipandbusiness"
+import '../src/assets/css/font.css'
 declare global {
   interface Window {
     Tawk_API?: Record<string, unknown>
@@ -126,6 +128,7 @@ function App() {
               <Book />
               {/* <Coaching /> */}
               <FitnessandLifestyle />
+              <MentorshipandBusiness />
               <Contact />
             </>
           }
@@ -261,6 +264,20 @@ function App() {
                 path="/fitness-lifestyle"
               />
               <FitnessandLifestyle />
+            </>
+          } 
+        />
+        <Route 
+          path="/mentorship-and-business" 
+          element={
+            <>
+              <SEO 
+                title="Mentorship & Business Coaching"
+                description="Explore our mentorship and business coaching programs designed to help you grow your business, enhance leadership skills, and achieve professional success."
+                keywords="mentorship coaching, business coaching, professional development, leadership skills, business growth"
+                path="/mentorship-and-business"
+              />
+              <MentorshipandBusiness />
             </>
           } 
         />

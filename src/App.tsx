@@ -119,16 +119,16 @@ function App() {
                 schemaData={homeSchema}
               />
               <Carousel />
-              <About />
-              <Cert />
               <Services />
               <BookSession />
-              <Testimonial />
-              <Blog />
-              <Book />
-              {/* <Coaching /> */}
               <FitnessandLifestyle />
               <MentorshipandBusiness />
+              <Coaching />
+              <Testimonial />
+              <About />
+              <Cert />
+              <Book />
+              <Blog />
               <Contact />
             </>
           }

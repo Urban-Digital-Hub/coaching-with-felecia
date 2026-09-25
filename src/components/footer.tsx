@@ -172,7 +172,7 @@ function Footer() {
         </div>
 
         <div className="border-top border-white-10 pt-4 mt-5 text-center text-white" style={{ color: '#ced4da' }}>
-          © {currentYear} Felecia. All rights reserved.
+         Copyright © {currentYear} Felecia Hammond. All rights reserved.
         </div>
       </div>
     </footer>
